@@ -404,7 +404,7 @@ section{padding-block:44px}
 }
 .nav-links::-webkit-scrollbar{display:none}
 .nav-links a{
-  text-decoration:none;color:var(--texto-tenue);
+  text-decoration:none;color:#8CFAE1;
   display:flex;align-items:center;
   padding-inline:26px;
   border-left:1px solid var(--borde);
@@ -415,7 +415,7 @@ section{padding-block:44px}
   white-space:nowrap;
   flex-shrink:0;
 }
-.nav-links a.activo{background:var(--celeste-anillo);color:var(--noche)}
+.nav-links a.activo{background:#8CFAE1;color:var(--noche)}
 
 /* Boton hamburguesa: oculto en escritorio, visible solo en mobile */
 .nav-toggle{
@@ -425,7 +425,7 @@ section{padding-block:44px}
   flex-direction:column;justify-content:center;align-items:flex-end;gap:6px;
   padding:0;
 }
-.nav-toggle span{display:block;width:26px;height:2px;background:var(--blanco);border-radius:2px}
+.nav-toggle span{display:block;width:26px;height:2px;background:#8CFAE1;border-radius:2px}
 .nav-close{
   display:none;
   position:absolute;top:18px;right:16px;
@@ -464,7 +464,7 @@ section{padding-block:44px}
     padding:20px 28px;
     font-size:18px;
   }
-  .nav-links a.activo{background:none;color:var(--celeste-anillo)}
+  .nav-links a.activo{background:none;color:#8CFAE1}
   .nav-close{display:block}
 }
 
