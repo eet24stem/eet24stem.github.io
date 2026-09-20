@@ -74,19 +74,60 @@ window.scrollTo(0, 0);
 
 // Carrusel del hero
 (function(){
+  var carrusel = document.getElementById('heroCarousel');
   var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
   var puntos = Array.prototype.slice.call(document.querySelectorAll('.hero-puntos .punto'));
+  var contenido = document.getElementById('heroContenido');
   var btnPrev = document.getElementById('heroPrev');
   var btnNext = document.getElementById('heroNext');
-  if (!slides.length) return;
+  if (!slides.length || !contenido) return;
+
+  // El texto de cada slide vive solo en JS: asi el cambio de texto es un
+  // corte rapido (fade-out breve, se pisa el contenido, fade-in) en vez de
+  // quedar superpuesto con el texto de la slide anterior durante el crossfade
+  // de las fotos de fondo (que sigue siendo mas lento y se ve bien mezclado).
+  var contenidoSlides = [
+    { titulo: 'SPACE WEEK', fecha: '4 — 9 OCTUBRE 2026', bajada: 'Charlas y mini entrevistas para despertar curiosidad sobre gente que hace ciencia y tecnología de punta en el país, en el área espacial.' },
+    { titulo: 'E.E.T. N°24 "SIMÓN DE IRIONDO"', fecha: null, bajada: 'La escuela técnica de Resistencia, Chaco que organiza la Space Week 2026.' }
+  ];
+
+  function renderContenido(i){
+    var d = contenidoSlides[i];
+    if (!d) return;
+    contenido.innerHTML = '';
+    var h1 = document.createElement('h1');
+    h1.className = 'titulo-evento';
+    h1.textContent = d.titulo;
+    contenido.appendChild(h1);
+    if (d.fecha) {
+      var badge = document.createElement('div');
+      badge.className = 'fecha-badge';
+      badge.textContent = d.fecha;
+      contenido.appendChild(badge);
+    }
+    var p = document.createElement('p');
+    p.className = 'bajada';
+    p.textContent = d.bajada;
+    contenido.appendChild(p);
+  }
 
   var actual = 0;
   var timer;
+  var cambioTexto;
 
   function mostrar(i){
-    actual = (i + slides.length) % slides.length;
+    var nuevo = (i + slides.length) % slides.length;
+    if (nuevo === actual) return;
+    actual = nuevo;
     slides.forEach(function(s, idx){ s.classList.toggle('activo', idx === actual); });
     puntos.forEach(function(p, idx){ p.classList.toggle('activo', idx === actual); });
+
+    contenido.classList.add('cambiando');
+    clearTimeout(cambioTexto);
+    cambioTexto = setTimeout(function(){
+      renderContenido(actual);
+      contenido.classList.remove('cambiando');
+    }, 250);
   }
   function siguiente(){ mostrar(actual + 1); }
   function anterior(){ mostrar(actual - 1); }
@@ -101,22 +142,50 @@ window.scrollTo(0, 0);
     p.addEventListener('click', function(){ mostrar(idx); reiniciarAutoplay(); });
   });
 
+  // Swipe tactil (celular): deslizar como en Instagram/TikTok cambia de slide
+  if (carrusel) {
+    var inicioX = 0, inicioY = 0;
+    carrusel.addEventListener('touchstart', function(e){
+      var t = e.changedTouches[0];
+      inicioX = t.clientX;
+      inicioY = t.clientY;
+    }, { passive: true });
+    carrusel.addEventListener('touchend', function(e){
+      var t = e.changedTouches[0];
+      var deltaX = t.clientX - inicioX;
+      var deltaY = t.clientY - inicioY;
+      if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX < 0) siguiente(); else anterior();
+        reiniciarAutoplay();
+      }
+    }, { passive: true });
+  }
+
   reiniciarAutoplay();
 })();
 
 // Cronograma: tabs por dia
+// Nota: los paneles NO tienen la clase "oculto" en el HTML (si el usuario no
+// tiene JS, ve todos los dias completos en vez de que el contenido desaparezca).
+// Por eso, al iniciar, ocultamos por JS los paneles que no correspondan al tab activo.
 (function(){
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab-dia'));
   var paneles = Array.prototype.slice.call(document.querySelectorAll('.cronograma-panel'));
   if (!tabs.length || !paneles.length) return;
 
+  function mostrarDia(dia){
+    tabs.forEach(function(t){ t.classList.toggle('activo', t.getAttribute('data-dia-tab') === dia); });
+    paneles.forEach(function(p){
+      p.classList.toggle('oculto', p.getAttribute('data-dia-panel') !== dia);
+    });
+  }
+
+  var tabActivo = tabs.filter(function(t){ return t.classList.contains('activo'); })[0] || tabs[0];
+  mostrarDia(tabActivo.getAttribute('data-dia-tab'));
+
   tabs.forEach(function(tab){
     tab.addEventListener('click', function(){
-      var dia = tab.getAttribute('data-dia-tab');
-      tabs.forEach(function(t){ t.classList.toggle('activo', t === tab); });
-      paneles.forEach(function(p){
-        p.classList.toggle('oculto', p.getAttribute('data-dia-panel') !== dia);
-      });
+      mostrarDia(tab.getAttribute('data-dia-tab'));
     });
   });
 })();
@@ -128,15 +197,23 @@ window.scrollTo(0, 0);
   var links = document.getElementById('navLinks');
   if (!toggle || !closeBtn || !links) return;
 
+  var scrollGuardado = 0;
+
   function abrirMenu(){
+    scrollGuardado = window.scrollY;
     links.classList.add('abierto');
     toggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = (-scrollGuardado) + 'px';
+    document.body.style.width = '100%';
   }
   function cerrarMenu(){
     links.classList.remove('abierto');
     toggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollGuardado);
   }
 
   toggle.addEventListener('click', abrirMenu);

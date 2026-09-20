@@ -34,20 +34,13 @@
 
 <main class="site-main">
 <div class="hero-carousel" id="heroCarousel">
-  <div class="hero-slide activo" style="background-image:url('img/hero-newton.jpg')">
-    <div class="hero-overlay"></div>
-    <div class="hero-contenido">
-      <h1 class="titulo-evento">SPACE WEEK</h1>
-      <div class="fecha-badge">4 — 9 OCTUBRE 2026</div>
-      <p class="bajada">Charlas y mini entrevistas para despertar curiosidad sobre gente que hace ciencia y tecnología de punta en el país, en el área espacial.</p>
-    </div>
-  </div>
-  <div class="hero-slide" style="background-image:url('img/hero-simon.jpg')">
-    <div class="hero-overlay"></div>
-    <div class="hero-contenido">
-      <h1 class="titulo-evento">E.E.T. N°24 "SIMÓN DE IRIONDO"</h1>
-      <p class="bajada">La escuela técnica de Resistencia, Chaco que organiza la Space Week 2026.</p>
-    </div>
+  <div class="hero-slide activo" style="background-image:url('img/hero-newton.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('img/hero-simon.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-contenido" id="heroContenido">
+    <h1 class="titulo-evento">SPACE WEEK</h1>
+    <div class="fecha-badge">4 — 9 OCTUBRE 2026</div>
+    <p class="bajada">Charlas y mini entrevistas para despertar curiosidad sobre gente que hace ciencia y tecnología de punta en el país, en el área espacial.</p>
   </div>
   <button class="hero-flecha hero-flecha-izq" id="heroPrev" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   <button class="hero-flecha hero-flecha-der" id="heroNext" aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -63,13 +56,13 @@
     <p class="section-sub">Segmentos de 45 minutos, mañana y tarde, para que ambos turnos puedan participar de alguna charla. Se dictan por aula según inscripción — anotate para asegurar tu lugar.</p>
 
     <div class="cronograma-tabs" id="cronogramaTabs">
-      <button class="tab-dia activo" data-dia-tab="1">Día 1</button>
-      <button class="tab-dia" data-dia-tab="2">Día 2</button>
+      <button class="tab-dia activo" data-dia-tab="4">Domingo 4</button>
+      <button class="tab-dia" data-dia-tab="5">Lunes 5</button>
     </div>
 
-    <div class="cronograma-panel" data-dia-panel="1">
+    <div class="cronograma-panel" data-dia-panel="4">
       <div class="dia-header">
-        <h3>Día 1 — Logros nacionales y mundiales</h3>
+        <h3>Domingo 4 — Logros nacionales y mundiales</h3>
         <span>EJEMPLO — a confirmar</span>
       </div>
       <div class="turno-acordeon">
@@ -88,9 +81,9 @@
       </div>
     </div>
 
-    <div class="cronograma-panel oculto" data-dia-panel="2">
+    <div class="cronograma-panel" data-dia-panel="5">
       <div class="dia-header">
-        <h3>Día 2 — Conceptos de física</h3>
+        <h3>Lunes 5 — Conceptos de física</h3>
         <span>EJEMPLO — a confirmar</span>
       </div>
       <div class="turno-acordeon">
@@ -115,7 +108,7 @@
     <p class="section-sub">Todavía en proceso de confirmación — esto es solo para mostrar cómo se vería la sección con nombres reales. Los días asignados también son de ejemplo.</p>
 
     <div class="speakers-filtros">
-      <input type="text" id="buscador-speaker" placeholder="Buscar por nombre o área">
+      <input type="text" id="buscador-speaker" placeholder="Buscar por nombre o área" aria-label="Buscar speaker por nombre o área">
       <select id="filtro-rol">
         <option value="">Área — todas</option>
         <option value="Astrofísica">Astrofísica</option>

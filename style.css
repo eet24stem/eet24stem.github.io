@@ -54,28 +54,30 @@ a{color:inherit}
   background-position:center;
   opacity:0;
   transition:opacity .8s ease;
-  display:flex;
-  align-items:center;
 }
 .hero-slide.activo{opacity:1;z-index:1}
 .hero-overlay{
   position:absolute;
   inset:0;
+  z-index:1;
   background:linear-gradient(180deg, rgba(11,24,48,.4), rgba(11,24,48,.82));
 }
 .hero-contenido{
-  position:relative;
+  position:absolute;
+  inset:0;
   z-index:2;
-  max-width:1040px;
-  margin-inline:auto;
-  padding-inline:16px;
-  width:100%;
-  text-align:center;
   display:flex;
   flex-direction:column;
   align-items:center;
+  justify-content:center;
   gap:16px;
+  max-width:1040px;
+  margin-inline:auto;
+  padding-inline:16px;
+  text-align:center;
+  transition:opacity .25s ease;
 }
+.hero-contenido.cambiando{opacity:0}
 .site-main .hero-contenido .titulo-evento{
   font-size:clamp(34px,7vw,64px);
   font-weight:700;
@@ -127,24 +129,34 @@ a{color:inherit}
 }
 .hero-puntos{
   position:absolute;
-  bottom:16px;
+  bottom:8px;
   left:0;
   right:0;
   z-index:3;
   display:flex;
   justify-content:center;
-  gap:8px;
+  gap:4px;
 }
 .hero-puntos .punto{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-puntos .punto::after{
+  content:'';
   width:9px;
   height:9px;
   border-radius:50%;
   background:rgba(255,255,255,.4);
-  border:none;
-  cursor:pointer;
-  padding:0;
 }
-.hero-puntos .punto.activo{background:#fff}
+.hero-puntos .punto.activo::after{background:#fff}
 
 section{padding-block:44px}
 .section-title{
@@ -240,7 +252,7 @@ section{padding-block:44px}
 .speakers-filtros input[type="text"],
 .speakers-filtros select{
   font-family:'Public Sans',sans-serif;
-  font-size:14px;
+  font-size:16px;
   padding:11px 14px;
   border-radius:10px;
   border:1px solid var(--borde);
@@ -248,7 +260,13 @@ section{padding-block:44px}
   color:var(--blanco);
 }
 .speakers-filtros input[type="text"]{flex:2;min-width:200px}
-.speakers-filtros select{flex:1;min-width:150px}
+.speakers-filtros select{
+  flex:1;
+  min-width:150px;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+}
 .speakers-filtros input[type="text"]::placeholder{color:var(--texto-tenue)}
 .sin-resultados{color:var(--texto-tenue);font-size:14.5px;padding:20px 0}
 
@@ -421,7 +439,7 @@ section{padding-block:44px}
 .nav-toggle{
   display:none;
   background:none;border:none;cursor:pointer;
-  width:40px;height:34px;
+  width:44px;height:44px;
   flex-direction:column;justify-content:center;align-items:flex-end;gap:6px;
   padding:0;
 }
@@ -476,7 +494,7 @@ section{padding-block:44px}
   --card-bg:#F3F6FA;
   --blanco:#12131A;
   --borde:rgba(11,24,48,0.14);
-  --dorado:#B8790A;
+  --dorado:#7A4E06;
   --celeste-claro:#0F4078;
 }
 .site-main .titulo-evento{
