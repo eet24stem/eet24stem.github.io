@@ -112,17 +112,18 @@ a{color:inherit}
   width:40px;
   height:40px;
   border-radius:50%;
-  font-size:22px;
-  line-height:1;
+  padding:0;
   cursor:pointer;
   display:flex;
   align-items:center;
   justify-content:center;
 }
+.hero-flecha svg{width:20px;height:20px;display:block}
 .hero-flecha-izq{left:14px}
 .hero-flecha-der{right:14px}
 @media (max-width:640px){
-  .hero-flecha{width:32px;height:32px;font-size:18px}
+  .hero-flecha{width:32px;height:32px}
+  .hero-flecha svg{width:16px;height:16px}
 }
 .hero-puntos{
   position:absolute;
