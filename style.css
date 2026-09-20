@@ -323,7 +323,7 @@ section{padding-block:44px}
   font-family:'Chakra Petch',sans-serif;
   color:#8CFAE1;font-size:14.5px;margin:0 0 8px 0;letter-spacing:0.04em;
   text-transform:uppercase;
-  padding-bottom:10px;border-bottom:2px solid #8CFAE1;
+  padding-bottom:10px;border-bottom:2px solid #fff;
 }
 .footer-col a{color:#8CFAE1;text-decoration:none;font-size:14px}
 .footer-col a:hover{color:#fff}
