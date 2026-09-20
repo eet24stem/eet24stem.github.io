@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Space Week EET24</title>
+<meta name="description" content="Space Week 2026: charlas y mini entrevistas de la E.E.T. N°24 Simón de Iriondo, del 4 al 9 de octubre en Resistencia, Chaco.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <div class="wrap">
+    <a class="nav-brand" href="https://eet24.edu.ar/" target="_blank" rel="noopener">
+      <img src="img/logo-stem.png" alt="Logo EET N24 Space Week">
+      <div class="txt">Simón de Iriondo</div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
+      <a href="#" class="activo">Home</a>
+      <a href="#cronograma">Cronograma</a>
+      <a href="#invitados">Speakers</a>
+      <a href="#">Inscribite</a>
+    </div>
+  </div>
+</div>
+
+<main class="site-main">
+<div class="hero-carousel" id="heroCarousel">
+  <div class="hero-slide activo" style="background-image:url('img/hero-newton.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-contenido">
+      <h1 class="titulo-evento">SPACE WEEK</h1>
+      <div class="fecha-badge">4 — 9 OCTUBRE 2026</div>
+      <p class="bajada">Charlas y mini entrevistas para despertar curiosidad sobre gente que hace ciencia y tecnología de punta en el país, en el área espacial.</p>
+    </div>
+  </div>
+  <div class="hero-slide" style="background-image:url('img/hero-simon.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-contenido">
+      <h1 class="titulo-evento">E.E.T. N°24 "SIMÓN DE IRIONDO"</h1>
+      <p class="bajada">La escuela técnica de Resistencia, Chaco que organiza la Space Week 2026.</p>
+    </div>
+  </div>
+  <button class="hero-flecha hero-flecha-izq" id="heroPrev" aria-label="Anterior">‹</button>
+  <button class="hero-flecha hero-flecha-der" id="heroNext" aria-label="Siguiente">›</button>
+  <div class="hero-puntos" id="heroPuntos">
+    <button class="punto activo" data-slide="0" aria-label="Ir a la slide 1"></button>
+    <button class="punto" data-slide="1" aria-label="Ir a la slide 2"></button>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="cronograma">
+    <h2 class="section-title">Cronograma</h2>
+    <p class="section-sub">Segmentos de 45 minutos, mañana y tarde, para que ambos turnos puedan participar de alguna charla. Se dictan por aula según inscripción — anotate para asegurar tu lugar.</p>
+
+    <div class="cronograma-tabs" id="cronogramaTabs">
+      <button class="tab-dia activo" data-dia-tab="1">Día 1</button>
+      <button class="tab-dia" data-dia-tab="2">Día 2</button>
+    </div>
+
+    <div class="cronograma-panel" data-dia-panel="1">
+      <div class="dia-header">
+        <h3>Día 1 — Logros nacionales y mundiales</h3>
+        <span>EJEMPLO — a confirmar</span>
+      </div>
+      <div class="turno-acordeon">
+        <h4 class="turno-titulo">Turno mañana</h4>
+        <div class="turno-contenido">
+          <div class="segmento"><span class="hora">08:00 a 08:45</span><span class="tema">Apertura + proyectos en curso (Tronador, SABIA-Mar, USAT-1)</span><span class="tag">Santiago</span></div>
+          <div class="segmento"><span class="hora">08:45 a 09:30</span><span class="tema">Mini entrevista — divulgación científica</span><span class="tag">a confirmar</span></div>
+          <div class="segmento"><span class="hora">09:30 a 10:15</span><span class="tema">Mini entrevista — sector aeroespacial</span><span class="tag">a confirmar</span></div>
+        </div>
+        <h4 class="turno-titulo">Turno tarde</h4>
+        <div class="turno-contenido">
+          <div class="segmento"><span class="hora">14:00 a 14:45</span><span class="tema">Repetición: apertura + proyectos en curso</span><span class="tag">Santiago</span></div>
+          <div class="segmento"><span class="hora">14:45 a 15:30</span><span class="tema">Mini entrevista (video o en vivo)</span><span class="tag">a confirmar</span></div>
+          <div class="segmento"><span class="hora">15:30 a 16:15</span><span class="tema">Espacio abierto — expone un estudiante</span><span class="tag">opcional</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cronograma-panel oculto" data-dia-panel="2">
+      <div class="dia-header">
+        <h3>Día 2 — Conceptos de física</h3>
+        <span>EJEMPLO — a confirmar</span>
+      </div>
+      <div class="turno-acordeon">
+        <h4 class="turno-titulo">Turno mañana</h4>
+        <div class="turno-contenido">
+          <div class="segmento"><span class="hora">08:00 a 08:45</span><span class="tema">Física para entender el espacio</span><span class="tag">Santiago + profesor</span></div>
+          <div class="segmento"><span class="hora">08:45 a 09:30</span><span class="tema">Mini entrevista — investigación académica</span><span class="tag">a confirmar</span></div>
+          <div class="segmento"><span class="hora">09:30 a 10:15</span><span class="tema">Mini entrevista — equipo estudiantil (satélites/CanSat)</span><span class="tag">a confirmar</span></div>
+        </div>
+        <h4 class="turno-titulo">Turno tarde</h4>
+        <div class="turno-contenido">
+          <div class="segmento"><span class="hora">14:00 a 14:45</span><span class="tema">Repetición: física para entender el espacio</span><span class="tag">Santiago + profesor</span></div>
+          <div class="segmento"><span class="hora">14:45 a 15:30</span><span class="tema">Mini entrevista (video o en vivo)</span><span class="tag">a confirmar</span></div>
+          <div class="segmento"><span class="hora">15:30 a 16:15</span><span class="tema">Espacio abierto — expone un estudiante</span><span class="tag">opcional</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="invitados">
+    <h2 class="section-title">Speakers / Entrevistados</h2>
+    <p class="section-sub">Todavía en proceso de confirmación — esto es solo para mostrar cómo se vería la sección con nombres reales. Los días asignados también son de ejemplo.</p>
+
+    <div class="speakers-filtros">
+      <input type="text" id="buscador-speaker" placeholder="Buscar por nombre o área">
+      <select id="filtro-rol">
+        <option value="">Área — todas</option>
+        <option value="Astrofísica">Astrofísica</option>
+        <option value="Candidata a astronauta">Candidata a astronauta</option>
+        <option value="Estudiante — CanSat">Estudiante — CanSat</option>
+        <option value="CONICET / divulgación">CONICET / divulgación</option>
+      </select>
+      <select id="filtro-dia">
+        <option value="">Día — todos</option>
+        <option value="4">Domingo 4</option>
+        <option value="5">Lunes 5</option>
+        <option value="6">Martes 6</option>
+        <option value="7">Miércoles 7</option>
+        <option value="8">Jueves 8</option>
+        <option value="9">Viernes 9</option>
+      </select>
+    </div>
+
+    <div class="grid-invitados" id="grid-speakers">
+      <div class="card-invitado" data-nombre="amina helmi astrofísica" data-rol="Astrofísica" data-dia="6">
+        <div class="avatar" style="background:#2C5A8C">AH</div>
+        <div class="rol">Astrofísica</div>
+        <h4>Amina Helmi</h4>
+        <p>Premio Kavli de Astrofísica 2026, Universidad de Groningen.</p>
+        <span class="estado">Contactada</span>
+      </div>
+      <div class="card-invitado" data-nombre="noel de castro candidata a astronauta" data-rol="Candidata a astronauta" data-dia="8">
+        <div class="avatar" style="background:#B8790A">NC</div>
+        <div class="rol">Candidata a astronauta</div>
+        <h4>Noel de Castro</h4>
+        <p>Misión Axiom Space / SpaceX Dragon, prevista para 2027.</p>
+        <span class="estado">Contactada</span>
+      </div>
+      <div class="card-invitado" data-nombre="equipo seds itba estudiante cansat" data-rol="Estudiante — CanSat" data-dia="7">
+        <div class="avatar" style="background:#3E7A4A">SI</div>
+        <div class="rol">Estudiante — CanSat</div>
+        <h4>Equipo SEDS ITBA</h4>
+        <p>1° puesto mundial en la competencia CanSat de la NASA.</p>
+        <span class="estado">Contactada</span>
+      </div>
+      <div class="card-invitado" data-nombre="beatriz garcía conicet divulgación" data-rol="CONICET / divulgación" data-dia="6">
+        <div class="avatar" style="background:#7A3E6E">BG</div>
+        <div class="rol">CONICET / divulgación</div>
+        <h4>Dra. Beatriz García</h4>
+        <p>ITeDA — colaboración internacional Pierre Auger.</p>
+        <span class="estado">Contactada</span>
+      </div>
+    </div>
+    <p id="sin-resultados" class="sin-resultados" style="display:none">No encontramos speakers con esos filtros.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Recuerdos del evento</h2>
+    <div class="merch-box">
+      <div class="icons">🔑📌🛰️</div>
+      <p>Vamos a tener llaveros y pines personalizados de Space Week para repartir entre estudiantes y profesores — algo simple para llevarse de recuerdo.</p>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-main">
+    <div class="footer-brand">
+      <img src="img/icon_stem_blanco.png" alt="STEM Hub - EET N24" class="footer-logo">
+    </div>
+    <div class="footer-col">
+      <h5>El evento</h5>
+      <a href="#">Home</a>
+      <a href="#cronograma">Cronograma</a>
+      <a href="#invitados">Speakers</a>
+    </div>
+    <div class="footer-col">
+      <h5>Participar</h5>
+      <a href="#">Inscribite</a>
+      <a href="#">Formularios de inscripción</a>
+    </div>
+    <div class="footer-col">
+      <h5>Redes</h5>
+      <a href="#">Instagram</a>
+      <a href="#">Grupo de WhatsApp (próximamente)</a>
+    </div>
+  </div>
+  <div class="footer-bottom-inner">
+    <div class="wrap footer-bottom-flex">
+      <span>Copyright © 2026 — E.E.T. N°24 "Simón de Iriondo"</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.9.24 2.4.4.6.24 1 .5 1.5 1 .5.5.7.9 1 1.5.16.5.34 1.2.4 2.4.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.24 1.9-.4 2.4-.24.6-.5 1-1 1.5-.5.5-.9.7-1.5 1-.5.16-1.2.34-2.4.4-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.9-.24-2.4-.4-.6-.24-1-.5-1.5-1-.5-.5-.7-.9-1-1.5-.16-.5-.34-1.2-.4-2.4C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.24-1.9.4-2.4.24-.6.5-1 1-1.5.5-.5.9-.7 1.5-1 .5-.16 1.2-.34 2.4-.4C8.4 2.21 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5 0-4.75.07-1 .05-1.55.2-1.9.34-.48.19-.82.4-1.18.77-.37.36-.58.7-.77 1.18-.14.35-.3.9-.34 1.9C3 9.3 3 9.65 3 12.8s0 3.5.07 4.75c.05 1 .2 1.55.34 1.9.19.48.4.82.77 1.18.36.37.7.58 1.18.77.35.14.9.3 1.9.34 1.25.06 1.6.07 4.75.07s3.5 0 4.75-.07c1-.05 1.55-.2 1.9-.34.48-.19.82-.4 1.18-.77.37-.36.58-.7.77-1.18.14-.35.3-.9.34-1.9.06-1.25.07-1.6.07-4.75s0-3.5-.07-4.75c-.05-1-.2-1.55-.34-1.9a3.16 3.16 0 0 0-.77-1.18 3.16 3.16 0 0 0-1.18-.77c-.35-.14-.9-.3-1.9-.34C15.5 4 15.15 4 12 4zm0 3.4A4.6 4.6 0 1 1 7.4 12 4.6 4.6 0 0 1 12 7.4zm0 1.8A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zm5.85-2.06a1.08 1.08 0 1 1-1.08-1.08 1.08 1.08 0 0 1 1.08 1.08z"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.7-.85-2-.95-.27-.1-.47-.15-.66.15-.2.3-.76.95-.93 1.15-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.09 1.7-.7 1.94-1.37.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.57-.35zM12.04 2.5c-5.24 0-9.5 4.26-9.5 9.5 0 1.68.44 3.26 1.2 4.63L2.5 21.5l4.98-1.31A9.46 9.46 0 0 0 12.04 21.5c5.24 0 9.5-4.26 9.5-9.5s-4.26-9.5-9.5-9.5zm0 17.2c-1.53 0-2.96-.41-4.2-1.13l-.3-.18-2.96.78.79-2.88-.2-.3a7.68 7.68 0 0 1-1.24-4.19c0-4.26 3.46-7.72 7.72-7.72s7.72 3.46 7.72 7.72-3.46 7.72-7.72 7.72z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

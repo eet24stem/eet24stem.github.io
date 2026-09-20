@@ -1,0 +1,484 @@
+:root{
+  --noche:#0B1830;
+  --noche-2:#0F2140;
+  --celeste-anillo:#8FCBF2;
+  --celeste-claro:#C9E8FB;
+  --blanco:#FFFFFF;
+  --negro-emblema:#12131A;
+  --naranja:#FF6B35;
+  --dorado:#FFC857;
+  --texto-tenue:#A9BBD6;
+  --borde:rgba(143,203,242,0.25);
+  --card-bg:#101F3B;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden;max-width:100%}
+body{
+  background:var(--noche);
+  color:var(--blanco);
+  font-family:'Public Sans', system-ui, sans-serif;
+  margin:0;
+  line-height:1.5;
+}
+h1,h2,h3,.display{
+  font-family:'Chakra Petch', 'Public Sans', system-ui, sans-serif;
+  text-wrap:balance;
+  letter-spacing:0.02em;
+}
+a{color:inherit}
+.wrap{max-width:1040px;margin-inline:auto;padding-inline:16px}
+.ribbon{
+  text-align:center;
+  font-size:12px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--dorado);
+  background:rgba(255,200,87,0.08);
+  border:1px solid rgba(255,200,87,0.3);
+  border-radius:999px;
+  padding:6px 14px;
+  display:inline-block;
+  margin-top:18px;
+}
+
+/* HERO CARRUSEL */
+.hero-carousel{
+  position:relative;
+  overflow:hidden;
+  height:clamp(360px,46vw,520px);
+}
+.hero-slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity .8s ease;
+  display:flex;
+  align-items:center;
+}
+.hero-slide.activo{opacity:1;z-index:1}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(11,24,48,.4), rgba(11,24,48,.82));
+}
+.hero-contenido{
+  position:relative;
+  z-index:2;
+  max-width:1040px;
+  margin-inline:auto;
+  padding-inline:16px;
+  width:100%;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+}
+.site-main .hero-contenido .titulo-evento{
+  font-size:clamp(34px,7vw,64px);
+  font-weight:700;
+  margin:0;
+  background:linear-gradient(180deg, #FFFFFF, #C9E8FB);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.hero-contenido .fecha-badge{
+  font-family:'Chakra Petch',sans-serif;
+  font-size:15px;
+  letter-spacing:0.08em;
+  color:#0B1830;
+  background:#8FCBF2;
+  padding:8px 18px;
+  border-radius:999px;
+  font-weight:600;
+}
+.hero-contenido .bajada{
+  max-width:560px;
+  color:#E7EEF8;
+  font-size:16px;
+  margin:0;
+}
+.hero-flecha{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:3;
+  background:rgba(11,24,48,.55);
+  border:1px solid rgba(255,255,255,.35);
+  color:#fff;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  font-size:22px;
+  line-height:1;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-flecha-izq{left:14px}
+.hero-flecha-der{right:14px}
+@media (max-width:640px){
+  .hero-flecha{width:32px;height:32px;font-size:18px}
+}
+.hero-puntos{
+  position:absolute;
+  bottom:16px;
+  left:0;
+  right:0;
+  z-index:3;
+  display:flex;
+  justify-content:center;
+  gap:8px;
+}
+.hero-puntos .punto{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:rgba(255,255,255,.4);
+  border:none;
+  cursor:pointer;
+  padding:0;
+}
+.hero-puntos .punto.activo{background:#fff}
+
+section{padding-block:44px}
+.section-title{
+  font-size:26px;
+  margin:0 0 6px 0;
+}
+.section-sub{color:var(--texto-tenue);margin:0 0 28px 0;max-width:620px;font-size:15px}
+
+/* CRONOGRAMA */
+.dia{
+  border:1px solid var(--borde);
+  border-radius:16px;
+  padding:20px;
+  margin-bottom:18px;
+  background:var(--card-bg);
+}
+.dia-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:14px;
+}
+.dia-header h3{margin:0;font-size:19px}
+.dia-header span{font-size:13px;color:var(--dorado);font-family:'Chakra Petch',sans-serif}
+
+.cronograma-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tab-dia{
+  font-family:'Chakra Petch',sans-serif;
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:0.03em;
+  color:var(--texto-tenue);
+  background:transparent;
+  border:1.5px solid var(--borde);
+  border-radius:999px;
+  padding:12px 26px;
+  cursor:pointer;
+}
+.tab-dia.activo{
+  background:var(--celeste-claro);
+  border-color:var(--celeste-claro);
+  color:#fff;
+}
+.cronograma-panel.oculto{display:none}
+
+.turno-acordeon{display:flex;flex-direction:column}
+.turno-titulo{
+  margin:0;
+  padding:14px 0 10px 0;
+  border-top:1px solid var(--borde);
+  font-family:'Chakra Petch',sans-serif;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  color:var(--texto-tenue);
+  font-weight:600;
+}
+.turno-acordeon .turno-titulo:first-child{border-top:none}
+
+.segmento{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:center;
+  padding:10px 0;
+  border-top:1px solid var(--borde);
+  font-size:14px;
+}
+.turno-contenido .segmento:first-of-type{border-top:none}
+.segmento .hora{color:var(--celeste-claro);font-family:'Chakra Petch',sans-serif;font-size:13px;flex-shrink:0;white-space:nowrap}
+.segmento .tema{flex:1;color:var(--blanco)}
+.segmento .tag{
+  font-size:11px;
+  color:var(--texto-tenue);
+  border:1px solid var(--borde);
+  border-radius:999px;
+  padding:2px 9px;
+  white-space:nowrap;
+}
+@media (max-width:480px){
+  .segmento{flex-wrap:wrap;row-gap:6px}
+  .segmento .hora{order:1;width:auto}
+  .segmento .tag{order:2;margin-left:auto}
+  .segmento .tema{order:3;flex-basis:100%;width:100%}
+}
+
+/* INVITADOS / SPEAKERS */
+.speakers-filtros{
+  display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;
+}
+.speakers-filtros input[type="text"],
+.speakers-filtros select{
+  font-family:'Public Sans',sans-serif;
+  font-size:14px;
+  padding:11px 14px;
+  border-radius:10px;
+  border:1px solid var(--borde);
+  background:var(--card-bg);
+  color:var(--blanco);
+}
+.speakers-filtros input[type="text"]{flex:2;min-width:200px}
+.speakers-filtros select{flex:1;min-width:150px}
+.speakers-filtros input[type="text"]::placeholder{color:var(--texto-tenue)}
+.sin-resultados{color:var(--texto-tenue);font-size:14.5px;padding:20px 0}
+
+.grid-invitados{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+
+@property --angulo-borde{
+  syntax:'<angle>';
+  initial-value:0deg;
+  inherits:false;
+}
+@keyframes girar-borde{ to{ --angulo-borde:360deg; } }
+
+.card-invitado{
+  position:relative;
+  border:1px solid var(--borde);
+  background:var(--card-bg);
+  border-radius:16px;
+  padding:18px;
+  isolation:isolate;
+}
+.card-invitado::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:18px;
+  padding:2px;
+  background:conic-gradient(from var(--angulo-borde), transparent 0%, #8FCBF2 12%, transparent 28%, #6FE3CC 50%, transparent 66%, #8FCBF2 82%, transparent 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  opacity:1;
+  z-index:-1;
+  animation:girar-borde 3.5s linear infinite;
+  pointer-events:none;
+}
+.card-invitado .avatar{
+  width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:18px;
+  margin-bottom:14px;
+}
+.card-invitado .rol{font-size:12px;color:var(--dorado);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
+.card-invitado h4{margin:0 0 6px 0;font-size:17px}
+.card-invitado p{margin:0;font-size:13.5px;color:var(--texto-tenue)}
+.estado{
+  display:inline-block;margin-top:10px;font-size:11px;padding:3px 10px;border-radius:999px;
+  background:rgba(143,203,242,0.12); color:var(--celeste-claro);
+}
+
+/* MERCH */
+.merch-box{
+  display:flex;gap:20px;flex-wrap:wrap;align-items:center;
+  border:1px solid var(--borde);border-radius:16px;padding:22px;background:var(--card-bg);
+}
+.merch-box .icons{display:flex;gap:14px;font-size:34px}
+.merch-box p{margin:0;color:var(--texto-tenue);font-size:14.5px;flex:1;min-width:220px}
+
+/* FOOTER estilo Instituto Balseiro (paleta propia: navy/celeste en vez de rojo) */
+.site-footer{border-top:1px solid var(--borde);margin-top:12px}
+.footer-main{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:32px;
+  padding-block:48px 36px;
+}
+@media (max-width:780px){.footer-main{grid-template-columns:1fr 1fr}}
+.footer-brand{display:flex;align-items:center;justify-content:center}
+.footer-brand .footer-logo{width:130px;height:130px;display:block;opacity:0.95}
+@media (max-width:780px){.footer-brand{justify-content:flex-start}}
+.footer-col{display:flex;flex-direction:column;gap:11px}
+.footer-col h5{
+  font-family:'Chakra Petch',sans-serif;
+  color:var(--blanco);font-size:14.5px;margin:0 0 8px 0;letter-spacing:0.04em;
+  text-transform:uppercase;
+  padding-bottom:10px;border-bottom:2px solid var(--celeste-anillo);
+}
+.footer-col a{color:var(--texto-tenue);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:var(--celeste-claro)}
+
+/* footer-bottom-inner: franja a todo el ancho de la pantalla (no solo del .wrap), con su propio fondo */
+.footer-bottom-inner{
+  width:100vw;
+  position:relative;
+  left:50%;
+  right:50%;
+  margin-left:-50vw;
+  margin-right:-50vw;
+  margin-top:12px;
+  padding-block:18px;
+  background:#080F20;
+  border-top:1px solid var(--borde);
+  font-size:13px;color:var(--texto-tenue);
+}
+.footer-bottom-flex{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;flex-wrap:wrap;
+}
+
+/* En celular: logo centrado arriba, y 4 bloques en grilla 2x2 pareja (El evento/Participar arriba, Redes/Copyright abajo) */
+@media (max-width:480px){
+  .footer-main{
+    grid-template-columns:1fr 1fr;
+    row-gap:28px;
+    column-gap:18px;
+    text-align:center;
+  }
+  .footer-brand{grid-column:1/-1;justify-content:center}
+  .footer-col{align-items:center}
+  .footer-main>.footer-col:nth-child(2){grid-column:1;grid-row:2}
+  .footer-main>.footer-col:nth-child(3){grid-column:2;grid-row:2}
+  .footer-main>.footer-col:nth-child(4){grid-column:1;grid-row:3}
+  .footer-bottom-flex{
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    text-align:center;
+  }
+}
+.footer-social{display:flex;gap:12px}
+.footer-social a{
+  width:32px;height:32px;border-radius:999px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(143,203,242,0.1);color:var(--celeste-claro);
+  transition:background .15s,color .15s;
+}
+.footer-social a:hover{background:var(--celeste-anillo);color:var(--noche)}
+.footer-social svg{width:15px;height:15px;fill:currentColor}
+
+/* HEADER estilo sitio oficial (calcado de eet24.edu.ar) */
+.navbar{
+  background:var(--noche-2);
+  border-bottom:1px solid var(--borde);
+}
+.navbar .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;
+  padding-block:0;
+}
+.nav-brand{display:flex;align-items:center;gap:16px;padding-block:22px;text-decoration:none}
+.nav-brand img{height:76px;width:auto;display:block}
+.nav-brand .txt{
+  font-family:'Chakra Petch',sans-serif;
+  font-weight:600;font-size:27px;color:var(--blanco);
+  line-height:1.2;
+}
+.nav-links{
+  display:flex;align-items:stretch;font-size:14.5px;align-self:stretch;
+  max-width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{
+  text-decoration:none;color:var(--texto-tenue);
+  display:flex;align-items:center;
+  padding-inline:26px;
+  border-left:1px solid var(--borde);
+  font-family:'Chakra Petch',sans-serif;
+  font-weight:600;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.nav-links a.activo{background:var(--celeste-anillo);color:var(--noche)}
+
+/* Boton hamburguesa: oculto en escritorio, visible solo en mobile */
+.nav-toggle{
+  display:none;
+  background:none;border:none;cursor:pointer;
+  width:40px;height:34px;
+  flex-direction:column;justify-content:center;align-items:flex-end;gap:6px;
+  padding:0;
+}
+.nav-toggle span{display:block;width:26px;height:2px;background:var(--blanco);border-radius:2px}
+.nav-close{
+  display:none;
+  position:absolute;top:18px;right:16px;
+  background:none;border:none;color:var(--blanco);font-size:22px;cursor:pointer;
+  width:40px;height:40px;
+}
+
+@media (max-width:640px){
+  .nav-toggle{display:flex}
+  .nav-brand{gap:10px;padding-block:14px}
+  .nav-brand img{height:52px}
+  .nav-brand .txt{font-size:21px}
+
+  /* El panel de links se convierte en un menu de pantalla completa */
+  .nav-links{
+    position:fixed;
+    inset:0;
+    margin:0;
+    width:100%;
+    max-width:100%;
+    background:var(--noche-2);
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    padding-top:100px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    transform:translateX(100%);
+    transition:transform .3s ease;
+    z-index:100;
+  }
+  .nav-links.abierto{transform:translateX(0)}
+  .nav-links a{
+    border-left:none;
+    border-bottom:1px solid var(--borde);
+    padding:20px 28px;
+    font-size:18px;
+  }
+  .nav-links a.activo{background:none;color:var(--celeste-anillo)}
+  .nav-close{display:block}
+}
+
+/* CUERPO en blanco (calcado de eet24.edu.ar), sin tocar navbar ni footer */
+.site-main{
+  background:#FFFFFF;
+  color:#12131A;
+  --texto-tenue:#5B6B85;
+  --card-bg:#F3F6FA;
+  --blanco:#12131A;
+  --borde:rgba(11,24,48,0.14);
+  --dorado:#B8790A;
+  --celeste-claro:#0F4078;
+}
+.site-main .titulo-evento{
+  background:linear-gradient(180deg, #0B1830, #1F3F73);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
