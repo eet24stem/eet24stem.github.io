@@ -35,6 +35,36 @@
   filtroDia.addEventListener('change', aplicarFiltros);
 })();
 
+// Resaltar en el menu la seccion que se esta viendo (scroll-spy)
+(function(){
+  var enlaces = Array.prototype.slice.call(document.querySelectorAll('#navLinks a'));
+  if (!enlaces.length) return;
+
+  var secciones = [
+    { href: '#', el: document.getElementById('heroCarousel') },
+    { href: '#cronograma', el: document.getElementById('cronograma') },
+    { href: '#invitados', el: document.getElementById('invitados') }
+  ].filter(function(s){ return s.el; });
+
+  if (!secciones.length || typeof IntersectionObserver === 'undefined') return;
+
+  function marcarActivo(href){
+    enlaces.forEach(function(a){
+      a.classList.toggle('activo', a.getAttribute('href') === href);
+    });
+  }
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (!entry.isIntersecting) return;
+      var seccion = secciones.filter(function(s){ return s.el === entry.target; })[0];
+      if (seccion) marcarActivo(seccion.href);
+    });
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+  secciones.forEach(function(s){ observer.observe(s.el); });
+})();
+
 // Carrusel del hero
 (function(){
   var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
