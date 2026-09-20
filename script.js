@@ -1,3 +1,10 @@
+// Al recargar la pagina, siempre arrancar arriba de todo (sin esto el navegador
+// restaura la posicion de scroll donde estabas antes de recargar)
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 // Filtro de la seccion Speakers (buscador + area + dia)
 (function(){
   var buscador = document.getElementById('buscador-speaker');
@@ -37,20 +44,20 @@
 
 // Resaltar en el menu la seccion que se esta viendo (scroll-spy)
 (function(){
-  var enlaces = Array.prototype.slice.call(document.querySelectorAll('#navLinks a'));
+  var enlaces = Array.prototype.slice.call(document.querySelectorAll('#navLinks a[data-nav]'));
   if (!enlaces.length) return;
 
   var secciones = [
-    { href: '#', el: document.getElementById('heroCarousel') },
-    { href: '#cronograma', el: document.getElementById('cronograma') },
-    { href: '#invitados', el: document.getElementById('invitados') }
+    { nav: 'inicio', el: document.getElementById('heroCarousel') },
+    { nav: 'cronograma', el: document.getElementById('cronograma') },
+    { nav: 'invitados', el: document.getElementById('invitados') }
   ].filter(function(s){ return s.el; });
 
   if (!secciones.length || typeof IntersectionObserver === 'undefined') return;
 
-  function marcarActivo(href){
+  function marcarActivo(nav){
     enlaces.forEach(function(a){
-      a.classList.toggle('activo', a.getAttribute('href') === href);
+      a.classList.toggle('activo', a.getAttribute('data-nav') === nav);
     });
   }
 
@@ -58,7 +65,7 @@
     entries.forEach(function(entry){
       if (!entry.isIntersecting) return;
       var seccion = secciones.filter(function(s){ return s.el === entry.target; })[0];
-      if (seccion) marcarActivo(seccion.href);
+      if (seccion) marcarActivo(seccion.nav);
     });
   }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
 
