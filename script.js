@@ -1,3 +1,4 @@
+
 // Al recargar la pagina, siempre arrancar arriba de todo (sin esto el navegador
 // restaura la posicion de scroll donde estabas antes de recargar)
 if ('scrollRestoration' in history) {
