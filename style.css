@@ -12,7 +12,8 @@
   --card-bg:#101F3B;
 }
 *{box-sizing:border-box}
-html,body{overflow-x:hidden;max-width:100%}
+/* clip en vez de hidden: hidden convierte a body en contenedor de scroll y rompe el header sticky (hidden queda de respaldo para navegadores viejos) */
+html,body{overflow-x:hidden;overflow-x:clip;max-width:100%}
 body{
   background:var(--noche);
   color:var(--blanco);
@@ -124,7 +125,8 @@ a{color:inherit}
 .hero-flecha-izq{left:14px}
 .hero-flecha-der{right:14px}
 @media (max-width:640px){
-  .hero-flecha{width:32px;height:32px}
+  /* En mobile las flechas van abajo, al lado de los puntos: centradas verticalmente tapaban el subtítulo */
+  .hero-flecha{width:32px;height:32px;top:auto;bottom:6px;transform:none}
   .hero-flecha svg{width:16px;height:16px}
 }
 .hero-puntos{
@@ -136,8 +138,11 @@ a{color:inherit}
   display:flex;
   justify-content:center;
   gap:4px;
+  /* el contenedor ocupa todo el ancho: que no tape las flechas (en mobile estan a la misma altura) */
+  pointer-events:none;
 }
 .hero-puntos .punto{
+  pointer-events:auto;
   width:28px;
   height:28px;
   border-radius:50%;
@@ -166,13 +171,6 @@ section{padding-block:44px}
 .section-sub{color:var(--texto-tenue);margin:0 0 28px 0;max-width:620px;font-size:16px}
 
 /* CRONOGRAMA */
-.dia{
-  border:1px solid var(--borde);
-  border-radius:16px;
-  padding:20px;
-  margin-bottom:18px;
-  background:var(--card-bg);
-}
 .dia-header{
   display:flex;
   justify-content:space-between;
@@ -311,12 +309,6 @@ section{padding-block:44px}
   z-index:-1;
   animation:girar-borde 3.5s linear infinite;
   pointer-events:none;
-}
-.card-invitado .avatar{
-  width:56px;height:56px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  color:#fff;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:18px;
-  margin-bottom:14px;
 }
 .card-invitado .rol{font-size:13px;color:var(--celeste-claro);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
 .card-invitado h4{margin:0 0 6px 0;font-size:18px}
@@ -464,6 +456,9 @@ section{padding-block:44px}
 }
 
 @media (max-width:640px){
+  /* Header fijo arriba en mobile: la pagina es muy larga y sin esto no hay forma de abrir el menu sin volver arriba */
+  .navbar{position:sticky;top:0;z-index:50}
+  section[id]{scroll-margin-top:90px}
   .nav-toggle{display:flex}
   .nav-brand{gap:10px;padding-block:14px}
   .nav-brand img{height:52px}
@@ -602,6 +597,9 @@ body.modal-abierto{
 }
 
 .segmento .tag.tag-clickable{
+  /* area tactil >= 44px (recomendacion de Apple) sin cambiar el espacio que ocupa en el layout */
+  padding-block:6px;
+  margin-block:-6px;
   cursor:pointer;
   color:var(--celeste-claro);
   font-weight:600;
@@ -691,6 +689,7 @@ body.modal-abierto{
   gap:18px;
   margin-bottom:20px;
   padding-bottom:18px;
+  padding-right:36px; /* reserva lugar para el botón X (36px, absoluto arriba a la derecha) */
   border-bottom:1px solid rgba(11,24,48,0.1);
 }
 .modal-speaker-avatar{
