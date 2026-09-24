@@ -134,8 +134,7 @@
 
       <section id="invitados">
         <h2 class="section-title">Speakers / Entrevistados</h2>
-        <p class="section-sub">Especialistas confirmados y en contacto para esta edición. Tocá la tarjeta de un speaker
-          confirmado para ver el tema de su charla y las preguntas guía.</p>
+        <p class="section-sub">Especialistas confirmados para esta edición. Tocá la tarjeta para ver el tema de su charla y las preguntas guía.</p>
 
         <div class="speakers-filtros">
           <input type="text" id="buscador-speaker" placeholder="Buscar por nombre o área"
@@ -144,11 +143,8 @@
             <option value="">Área — todas</option>
             <option value="Astrofísica">Astrofísica</option>
             <option value="Astronomía">Astronomía</option>
-            <option value="Candidata a astronauta">Candidata a astronauta</option>
-            <option value="CONICET / divulgación">CONICET / divulgación</option>
-            <option value="Cosmología">Cosmología</option>
             <option value="Ingeniería Espacial">Ingeniería Espacial</option>
-            <option value="Ingeniería Química">Ingeniería Química</option>
+            <!-- dormidas hasta reactivar sus speakers: Candidata a astronauta, CONICET / divulgación, Cosmología, Ingeniería Química -->
           </select>
           <select id="filtro-dia">
             <option value="">Día — todos</option>
@@ -185,6 +181,7 @@
               (Elías 2-24 b).</p>
             <span class="estado confirmada">Confirmado</span>
           </div>
+          <!-- SPEAKERS DORMIDOS (en contacto, sin confirmar). Para reactivar uno, sacarlo de este comentario.
           <div class="card-invitado" data-nombre="susana landau cosmóloga ifiba" data-rol="Cosmología" data-dia="">
             <img src="img/landau.jpg" alt="Susana Landau" class="avatar-img">
             <div class="rol">Cosmología</div>
@@ -253,6 +250,7 @@
             <p>Ingeniero químico (UNSa), cursando estudios en recursos y minería espacial.</p>
             <span class="estado">En contacto</span>
           </div>
+          FIN SPEAKERS DORMIDOS -->
         </div>
         <p id="sin-resultados" class="sin-resultados" style="display:none">No encontramos speakers con esos filtros.</p>
       </section>
@@ -284,9 +282,16 @@
             <div class="destacado-img" role="img" aria-label="La Estación Espacial Internacional sobre la Tierra" style="background-image:url('img/iss.jpg')"></div>
             <div class="destacado-content">
               <span class="destacado-fecha">Próximamente</span>
-              <h4>Reservá tu tarjeta</h4>
-              <p>Próximamente vamos a publicar el formulario para reservar y personalizar tu tarjeta exclusiva de la
-                Space Week.</p>
+              <h4>Reservá tu tarjeta — Turno mañana</h4>
+              <p>Próximamente vamos a publicar el formulario para reservar y personalizar tu tarjeta exclusiva de la Space Week, para los cursos del turno mañana.</p>
+            </div>
+          </div>
+          <div class="destacado-card">
+            <div class="destacado-img" role="img" aria-label="Saturno y sus anillos fotografiados por la sonda Cassini" style="background-image:url('img/saturno.jpg')"></div>
+            <div class="destacado-content">
+              <span class="destacado-fecha">Próximamente</span>
+              <h4>Reservá tu tarjeta — Turno tarde</h4>
+              <p>Próximamente vamos a publicar el formulario para reservar y personalizar tu tarjeta exclusiva de la Space Week, para los cursos del turno tarde.</p>
             </div>
           </div>
         </div>
@@ -296,14 +301,14 @@
         <h2 class="section-title">Galería</h2>
         <p class="section-sub">Proyectos, misiones y curiosidades del sector aeroespacial, en Argentina y en el mundo.</p>
         <div class="galeria-grid">
-          <div class="galeria-item" role="img" aria-label="Cohete argentino Tronador II" style="background-image:url('img/tronador.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="Cohete argentino Tronador II" style="background-image:url('img/tronador.jpg');background-position:center 12%"></div>
           <div class="galeria-item" role="img" aria-label="Satélite ARSAT-1 en la sala limpia de INVAP, Bariloche" style="background-image:url('img/arsat1.jpg')"></div>
-          <div class="galeria-item" role="img" aria-label="Banco de ensayo de la antena del satélite SAOCOM" style="background-image:url('img/saocom-antena.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="Banco de ensayo de la antena del satélite SAOCOM" style="background-image:url('img/saocom-antena.jpg');background-position:center 20%"></div>
           <div class="galeria-item" role="img" aria-label="Detectores del Observatorio Pierre Auger en Malargüe, con la cordillera de fondo" style="background-image:url('img/auger.jpg')"></div>
           <div class="galeria-item" role="img" aria-label="La Estación Espacial Internacional sobre la Tierra" style="background-image:url('img/iss.jpg')"></div>
           <div class="galeria-item" role="img" aria-label="Robot Astrobee flotando dentro de la Estación Espacial Internacional" style="background-image:url('img/astrobee.jpg')"></div>
           <div class="galeria-item" role="img" aria-label="Helicóptero Ingenuity en la superficie de Marte" style="background-image:url('img/ingenuity.jpg')"></div>
-          <div class="galeria-item" role="img" aria-label="Buzz Aldrin caminando sobre la Luna, Apolo 11" style="background-image:url('img/aldrin-luna.jpg');background-position:center 20%"></div>
+          <div class="galeria-item" role="img" aria-label="Buzz Aldrin caminando sobre la Luna, Apolo 11" style="background-image:url('img/aldrin-luna.jpg');background-position:center 0%"></div>
           <div class="galeria-item" role="img" aria-label="La Tierra saliendo sobre el horizonte lunar, Apolo 8" style="background-image:url('img/earthrise.jpg');background-position:center 65%"></div>
           <div class="galeria-item" role="img" aria-label="Los Acantilados Cósmicos de la Nebulosa de Carina, telescopio James Webb" style="background-image:url('img/webb-cosmic-cliffs.jpg')"></div>
           <div class="galeria-item" role="img" aria-label="Saturno y sus anillos fotografiados por la sonda Cassini" style="background-image:url('img/saturno.jpg')"></div>
