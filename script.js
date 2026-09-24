@@ -88,7 +88,7 @@ window.scrollTo(0, 0);
   // quedar superpuesto con el texto de la slide anterior durante el crossfade
   // de las fotos de fondo (que sigue siendo mas lento y se ve bien mezclado).
   var contenidoSlides = [
-    { titulo: 'SPACE WEEK', fecha: '4 — 9 OCTUBRE 2026', bajada: 'Charlas y mini entrevistas para despertar curiosidad sobre gente que hace ciencia y tecnología de punta en el país, en el área espacial.' },
+    { titulo: 'SPACE WEEK', fecha: '6 — 8 OCTUBRE 2026', bajada: 'Charlas y mini entrevistas para despertar curiosidad sobre gente que hace ciencia y tecnología de punta en el país, en el área espacial.' },
     { titulo: 'E.E.T. N°24 "SIMÓN DE IRIONDO"', fecha: null, bajada: 'La escuela técnica de Resistencia, Chaco que organiza la Space Week 2026.' }
   ];
 

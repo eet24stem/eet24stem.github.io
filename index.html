@@ -1,376 +1,451 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Space Week EET24</title>
-<link rel="icon" type="image/png" href="img/favicon.png">
-<meta name="description" content="Space Week 2026: charlas y mini entrevistas de la E.E.T. N°24 Simón de Iriondo, del 4 al 9 de octubre en Resistencia, Chaco.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Space Week EET24</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <meta name="description"
+    content="Space Week 2026: charlas y mini entrevistas de la E.E.T. N°24 Simón de Iriondo, del 6 al 8 de octubre en Resistencia, Chaco.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="navbar">
-  <div class="wrap">
-    <a class="nav-brand" href="https://eet24.edu.ar/" target="_blank" rel="noopener">
-      <img src="img/logo-stem.png" alt="Logo EET N24 Space Week">
-      <div class="txt">Simón de Iriondo</div>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-links" id="navLinks">
-      <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
-      <a href="#" data-nav="inicio" class="activo">Home</a>
-      <a href="#cronograma" data-nav="cronograma">Cronograma</a>
-      <a href="#invitados" data-nav="invitados">Speakers</a>
-      <a href="#">Inscribite</a>
-    </div>
-  </div>
-</div>
-
-<main class="site-main">
-<div class="hero-carousel" id="heroCarousel">
-  <div class="hero-slide activo" style="background-image:url('img/artemis-launch.jpg');background-position:center 78%"></div>
-  <div class="hero-slide" style="background-image:url('img/blue-marble.jpg')"></div>
-  <div class="hero-slide" style="background-image:url('img/mars-rover.jpg')"></div>
-  <div class="hero-slide" style="background-image:url('img/spacewalk.jpg')"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-contenido" id="heroContenido">
-    <h1 class="titulo-evento">SPACE WEEK</h1>
-    <div class="fecha-badge">6 — 8 OCTUBRE 2026</div>
-    <p class="bajada">Charlas y mini entrevistas para despertar curiosidad sobre gente que hace ciencia y tecnología de punta en el país, en el área espacial.</p>
-  </div>
-  <button class="hero-flecha hero-flecha-izq" id="heroPrev" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-  <button class="hero-flecha hero-flecha-der" id="heroNext" aria-label="Siguiente"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-  <div class="hero-puntos" id="heroPuntos">
-    <button class="punto activo" data-slide="0" aria-label="Ir a la slide 1"></button>
-    <button class="punto" data-slide="1" aria-label="Ir a la slide 2"></button>
-    <button class="punto" data-slide="2" aria-label="Ir a la slide 3"></button>
-    <button class="punto" data-slide="3" aria-label="Ir a la slide 4"></button>
-  </div>
-</div>
-
-<div class="wrap">
-  <section id="cronograma">
-    <h2 class="section-title">Cronograma</h2>
-    <p class="section-sub">Segmentos de 45 minutos, mañana y tarde, para que ambos turnos puedan participar de alguna charla. Se dictan por aula según inscripción — anotate para asegurar tu lugar.</p>
-
-    <div class="cronograma-tabs" id="cronogramaTabs">
-      <button class="tab-dia activo" data-dia-tab="6">Martes 6</button>
-      <button class="tab-dia" data-dia-tab="7">Miércoles 7</button>
-      <button class="tab-dia" data-dia-tab="8">Jueves 8</button>
-    </div>
-
-    <!-- MARTES 6 -->
-    <div class="cronograma-panel" data-dia-panel="6">
-      <div class="dia-header">
-        <h3>Martes 6 de octubre</h3>
-        <span>EJEMPLO — a confirmar</span>
-      </div>
-      <div class="turno-acordeon">
-        <h4 class="turno-titulo">Turno mañana</h4>
-        <div class="turno-contenido">
-          <div class="segmento"><span class="hora">08:00 a 08:40</span><span class="tema">Charla 1</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">09:10 a 09:50</span><span class="tema">Charla 2</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Charla 3</span><span class="tag">a confirmar</span></div>
-        </div>
-        <h4 class="turno-titulo">Turno tarde</h4>
-        <div class="turno-contenido">
-          <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema">Charla 1</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Paneles solares y energía espacial</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="socolovsky" role="button" tabindex="0" title="Ver ficha de Hernán Socolovsky">Hernán Socolovsky<span class="tag-desc">CNEA — Energía Solar</span></span></div>
-          <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema">Charla 3</span><span class="tag">opcional</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MIERCOLES 7 -->
-    <div class="cronograma-panel oculto" data-dia-panel="7">
-      <div class="dia-header">
-        <h3>Miércoles 7 de octubre</h3>
-        <span>EJEMPLO — a confirmar</span>
-      </div>
-      <div class="turno-acordeon">
-        <h4 class="turno-titulo">Turno mañana</h4>
-        <div class="turno-contenido">
-          <div class="segmento"><span class="hora">08:00 a 08:40</span><span class="tema">Charla 1</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">09:10 a 09:50</span><span class="tema">Charla 2</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Charla 3</span><span class="tag">a confirmar</span></div>
-        </div>
-        <h4 class="turno-titulo">Turno tarde</h4>
-        <div class="turno-contenido">
-          <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema">Charla 1</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Charla 2</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema">Charla 3</span><span class="tag">opcional</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- JUEVES 8 -->
-    <div class="cronograma-panel oculto" data-dia-panel="8">
-      <div class="dia-header">
-        <h3>Jueves 8 de octubre</h3>
-        <span>EJEMPLO — a confirmar</span>
-      </div>
-      <div class="turno-acordeon">
-        <h4 class="turno-titulo">Turno mañana</h4>
-        <div class="turno-contenido">
-          <div class="segmento"><span class="hora">08:00 a 08:40</span><span class="tema">Charla 1</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">09:10 a 09:50</span><span class="tema">Charla 2</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Detección y estudio de exoplanetas</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="cieza" role="button" tabindex="0" title="Ver ficha de Lucas Cieza">Lucas Cieza<span class="tag-desc">Universidad Diego Portales</span></span></div>
-        </div>
-        <h4 class="turno-titulo">Turno tarde</h4>
-        <div class="turno-contenido">
-          <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema">Charla 1</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Meteoros, radares y basura espacial</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="janches" role="button" tabindex="0" title="Ver ficha de Diego Janches">Diego Janches<span class="tag-desc">NASA Goddard</span></span></div>
-          <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema">Charla 3</span><span class="tag">opcional</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="invitados">
-    <h2 class="section-title">Speakers / Entrevistados</h2>
-    <p class="section-sub">Todavía en proceso de confirmación — esto es solo para mostrar cómo se vería la sección con nombres reales. Los días asignados también son de ejemplo.</p>
-
-    <div class="speakers-filtros">
-      <input type="text" id="buscador-speaker" placeholder="Buscar por nombre o área" aria-label="Buscar speaker por nombre o área">
-      <select id="filtro-rol">
-        <option value="">Área — todas</option>
-        <option value="Astrofísica">Astrofísica</option>
-        <option value="Candidata a astronauta">Candidata a astronauta</option>
-        <option value="Estudiante — CanSat">Estudiante — CanSat</option>
-        <option value="CONICET / divulgación">CONICET / divulgación</option>
-      </select>
-      <select id="filtro-dia">
-        <option value="">Día — todos</option>
-        <option value="6">Martes 6</option>
-        <option value="7">Miércoles 7</option>
-        <option value="8">Jueves 8</option>
-      </select>
-    </div>
-
-    <div class="grid-invitados" id="grid-speakers">
-      <div class="card-invitado card-clickable" data-speaker="socolovsky" role="button" tabindex="0" data-nombre="hernán socolovsky cnea paneles solares" data-rol="Ingeniería Espacial" data-dia="6">
-        <img src="img/socolovsky.jpg" alt="Hernán Socolovsky" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">CNEA — Energía Solar</div>
-        <h4>Hernán Socolovsky</h4>
-        <p>Ingeniero del Departamento de Energía Solar de la CNEA; desarrolla paneles solares para uso espacial, entre ellos ATENEA, que voló en Artemis II.</p>
-        <span class="estado confirmada">Confirmado</span>
-      </div>
-      <div class="card-invitado card-clickable" data-speaker="janches" role="button" tabindex="0" data-nombre="diego janches nasa goddard astrofísica" data-rol="Astrofísica" data-dia="8">
-        <img src="img/janches.jpg" alt="Diego Janches" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">NASA Goddard</div>
-        <h4>Diego Janches</h4>
-        <p>Astrofísico, investiga en NASA Goddard; colabora con la UNLP en el radar de meteoros de Río Grande. Tiene un asteroide con su nombre.</p>
-        <span class="estado confirmada">Confirmado</span>
-      </div>
-      <div class="card-invitado card-clickable" data-speaker="cieza" role="button" tabindex="0" data-nombre="lucas cieza astronomía proyecto odisea" data-rol="Astronomía" data-dia="8">
-        <img src="img/cieza.jpg" alt="Lucas Cieza" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">Universidad Diego Portales</div>
-        <h4>Lucas Cieza</h4>
-        <p>Astrónomo, lidera el proyecto Odisea, que descubrió el exoplaneta más joven observado hasta la fecha (Elías 2-24 b).</p>
-        <span class="estado confirmada">Confirmado</span>
-      </div>
-      <div class="card-invitado" data-nombre="susana landau cosmóloga ifiba" data-rol="Cosmología" data-dia="">
-        <img src="img/landau.jpg" alt="Susana Landau" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">Cosmología</div>
-        <h4>Dra. Susana Landau</h4>
-        <p>Investigadora en el IFIBA (CONICET-UBA), especializada en cosmología.</p>
-        <span class="estado">En contacto</span>
-      </div>
-      <div class="card-invitado" data-nombre="rodrigo fernando díaz astronomía exoplanetas" data-rol="Astronomía" data-dia="">
-        <img src="img/diaz.jpg" alt="Rodrigo Fernando Díaz" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">Astronomía / Exoplanetas</div>
-        <h4>Dr. Rodrigo Fernando Díaz</h4>
-        <p>Investigador en ICAS-UNSAM e ITBA, especializado en el estudio de exoplanetas.</p>
-        <span class="estado">En contacto</span>
-      </div>
-      <div class="card-invitado" data-nombre="beatriz garcía conicet divulgación pierre auger" data-rol="CONICET / divulgación" data-dia="">
-        <img src="img/garcia.jpg" alt="Beatriz García" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">CONICET / Divulgación</div>
-        <h4>Dra. Beatriz García</h4>
-        <p>ITeDA — Colaboración internacional en el Observatorio Pierre Auger.</p>
-        <span class="estado">En contacto</span>
-      </div>
-      <div class="card-invitado" data-nombre="matías terpolilli astronomía unlp" data-rol="Astronomía" data-dia="">
-        <img src="img/terpolilli.jpg" alt="Matías Terpolilli" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">Astronomía</div>
-        <h4>Matías Terpolilli</h4>
-        <p>Facultad de Ciencias Astronómicas y Geofísicas de la UNLP (FCAG).</p>
-        <span class="estado">En contacto</span>
-      </div>
-      <div class="card-invitado" data-nombre="gustavo romero astrofísica iar" data-rol="Astrofísica" data-dia="">
-        <img src="img/romero.jpg" alt="Gustavo Romero" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">Astrofísica</div>
-        <h4>Dr. Gustavo Romero</h4>
-        <p>Investigador del Instituto Argentino de Radioastronomía (IAR).</p>
-        <span class="estado">En contacto</span>
-      </div>
-      <div class="card-invitado" data-nombre="amina helmi astrofísica kavli" data-rol="Astrofísica" data-dia="">
-        <img src="img/helmi.jpg" alt="Amina Helmi" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">Astrofísica</div>
-        <h4>Dra. Amina Helmi</h4>
-        <p>Premio Kavli de Astrofísica 2026, Universidad de Groningen.</p>
-        <span class="estado">En contacto</span>
-      </div>
-      <div class="card-invitado" data-nombre="lucas paganini nasa goddard" data-rol="Ingeniería Espacial" data-dia="">
-        <img src="img/paganini.jpg" alt="Lucas Paganini" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">Ingeniería Espacial</div>
-        <h4>Dr. Lucas Paganini</h4>
-        <p>Investigador en el Goddard Space Flight Center de la NASA.</p>
-        <span class="estado">En contacto</span>
-      </div>
-      <div class="card-invitado" data-nombre="maría noel de castro campos candidata astronauta" data-rol="Candidata a astronauta" data-dia="">
-        <img src="img/decastrocampos.jpg" alt="María Noel de Castro Campos" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">Candidata a Astronauta</div>
-        <h4>María Noel de Castro Campos</h4>
-        <p>Misión Axiom Space / SpaceX Dragon.</p>
-        <span class="estado">En contacto</span>
-      </div>
-      <div class="card-invitado" data-nombre="josé de castro alem ingeniería química" data-rol="Ingeniería Química" data-dia="">
-        <img src="img/decastroalem.jpg" alt="José De Castro Alem" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
-        <div class="rol">Ingeniería Química</div>
-        <h4>José De Castro Alem</h4>
-        <p>Ingeniero químico (UNSa), cursando estudios en recursos y minería espacial.</p>
-        <span class="estado">En contacto</span>
-      </div>
-    </div>
-    <p id="sin-resultados" class="sin-resultados" style="display:none">No encontramos speakers con esos filtros.</p>
-  </section>
-
-  <section>
-    <h2 class="section-title">Recuerdos del evento</h2>
-    <div class="merch-box">
-      <div class="icons">🔑📌🛰️</div>
-      <p>Vamos a tener llaveros y pines personalizados de Space Week para repartir entre estudiantes y profesores — algo simple para llevarse de recuerdo.</p>
-    </div>
-  </section>
-
-  <!-- Nuevas Secciones -->
-  <section id="noticias">
-    <h2 class="section-title">Noticias y Destacados</h2>
-    <p class="section-sub">Las últimas novedades sobre la organización del evento.</p>
-    <div class="destacados-grid">
-      <div class="destacado-card">
-        <div class="destacado-img" style="background-image:url('img/tronador.jpg')"></div>
-        <div class="destacado-content">
-          <span class="destacado-fecha">23 de Septiembre, 2026</span>
-          <h4>¡Fechas Confirmadas!</h4>
-          <p>La Space Week se realizará los días martes 6, miércoles 7 y jueves 8 de octubre en las instalaciones de la escuela.</p>
-        </div>
-      </div>
-      <div class="destacado-card">
-        <div class="destacado-img" style="background-image:url('img/iss.jpg')"></div>
-        <div class="destacado-content">
-          <span class="destacado-fecha">Próximamente</span>
-          <h4>Reservá tu tarjeta</h4>
-          <p>Próximamente vamos a publicar el formulario para reservar y personalizar tu tarjeta exclusiva de la Space Week.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="galeria">
-    <h2 class="section-title">Galería</h2>
-    <p class="section-sub">Un vistazo a nuestras instalaciones y preparativos.</p>
-    <div class="galeria-grid">
-      <div class="galeria-item" style="background-image:url('img/tronador.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/iss.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/auger.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/meteoro.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/hero-simon.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/janches.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/socolovsky.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/cieza.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/landau.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/diaz.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/garcia.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/terpolilli.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/romero.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/helmi.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/paganini.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/decastrocampos.jpg')"></div>
-      <div class="galeria-item" style="background-image:url('img/decastroalem.jpg')"></div>
-    </div>
-  </section>
-
-  <section id="ubicacion">
-    <h2 class="section-title">Ubicación</h2>
-    <p class="section-sub">Nos encontramos en el edificio central de la E.E.T. N°24 "Simón de Iriondo".</p>
-    <div class="mapa-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.8529272365287!2d-58.9830504!3d-27.4426543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450c5d0db2460b%3A0xc3af8cfb3d4fba79!2sE.E.T.%20N%C2%B024%20Sim%C3%B3n%20de%20Iriondo!5e0!3m2!1ses-419!2sar!4v1711234567890!5m2!1ses-419!2sar" width="100%" height="350" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
-</div>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap footer-main">
-    <div class="footer-brand">
-      <img src="img/icon_stem_blanco.png" alt="STEM Hub - EET N24" class="footer-logo">
-    </div>
-    <div class="footer-col">
-      <h5>El evento</h5>
-      <a href="#">Home</a>
-      <a href="#cronograma">Cronograma</a>
-      <a href="#invitados">Speakers</a>
-    </div>
-    <div class="footer-col">
-      <h5>Participar</h5>
-      <a href="#">Inscribite</a>
-      <a href="#">Formularios de inscripción</a>
-    </div>
-    <div class="footer-col">
-      <h5>Redes</h5>
-      <a href="https://www.instagram.com/eet24stem/" target="_blank" rel="noopener">Instagram</a>
-      <a href="#">Grupo de WhatsApp (próximamente)</a>
-    </div>
-  </div>
-  <div class="footer-bottom-inner">
-    <div class="wrap footer-bottom-flex">
-      <span>Copyright © 2026 — E.E.T. N°24 "Simón de Iriondo"</span>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/eet24stem/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.9.24 2.4.4.6.24 1 .5 1.5 1 .5.5.7.9 1 1.5.16.5.34 1.2.4 2.4.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.24 1.9-.4 2.4-.24.6-.5 1-1 1.5-.5.5-.9.7-1.5 1-.5.16-1.2.34-2.4.4-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.9-.24-2.4-.4-.6-.24-1-.5-1.5-1-.5-.5-.7-.9-1-1.5-.16-.5-.34-1.2-.4-2.4C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.24-1.9.4-2.4.24-.6.5-1 1-1.5.5-.5.9-.7 1.5-1 .5-.16 1.2-.34 2.4-.4C8.4 2.21 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5 0-4.75.07-1 .05-1.55.2-1.9.34-.48.19-.82.4-1.18.77-.37.36-.58.7-.77 1.18-.14.35-.3.9-.34 1.9C3 9.3 3 9.65 3 12.8s0 3.5.07 4.75c.05 1 .2 1.55.34 1.9.19.48.4.82.77 1.18.36.37.7.58 1.18.77.35.14.9.3 1.9.34 1.25.06 1.6.07 4.75.07s3.5 0 4.75-.07c1-.05 1.55-.2 1.9-.34.48-.19.82-.4 1.18-.77.37-.36.58-.7.77-1.18.14-.35.3-.9.34-1.9.06-1.25.07-1.6.07-4.75s0-3.5-.07-4.75c-.05-1-.2-1.55-.34-1.9a3.16 3.16 0 0 0-.77-1.18 3.16 3.16 0 0 0-1.18-.77c-.35-.14-.9-.3-1.9-.34C15.5 4 15.15 4 12 4zm0 3.4A4.6 4.6 0 1 1 7.4 12 4.6 4.6 0 0 1 12 7.4zm0 1.8A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zm5.85-2.06a1.08 1.08 0 1 1-1.08-1.08 1.08 1.08 0 0 1 1.08 1.08z"/></svg></a>
-        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.7-.85-2-.95-.27-.1-.47-.15-.66.15-.2.3-.76.95-.93 1.15-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.09 1.7-.7 1.94-1.37.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.57-.35zM12.04 2.5c-5.24 0-9.5 4.26-9.5 9.5 0 1.68.44 3.26 1.2 4.63L2.5 21.5l4.98-1.31A9.46 9.46 0 0 0 12.04 21.5c5.24 0 9.5-4.26 9.5-9.5s-4.26-9.5-9.5-9.5zm0 17.2c-1.53 0-2.96-.41-4.2-1.13l-.3-.18-2.96.78.79-2.88-.2-.3a7.68 7.68 0 0 1-1.24-4.19c0-4.26 3.46-7.72 7.72-7.72s7.72 3.46 7.72 7.72-3.46 7.72-7.72 7.72z"/></svg></a>
+  <div class="navbar">
+    <div class="wrap">
+      <a class="nav-brand" href="https://eet24.edu.ar/" target="_blank" rel="noopener">
+        <img src="img/logo-stem.png" alt="Logo EET N24 Space Week">
+        <div class="txt">Simón de Iriondo</div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <button class="nav-close" id="navClose" aria-label="Cerrar menú">✕</button>
+        <a href="#" data-nav="inicio" class="activo">Home</a>
+        <a href="#cronograma" data-nav="cronograma">Cronograma</a>
+        <a href="#invitados" data-nav="invitados">Speakers</a>
+        <a href="#noticias">Novedades</a>
       </div>
     </div>
   </div>
-</footer>
 
-<!-- MODAL DETALLE DE SPEAKERS CONFIRMADOS -->
-<div class="modal-speaker-overlay" id="modalSpeaker" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalSpeakerNombre">
-  <div class="modal-speaker-backdrop" id="modalSpeakerBackdrop"></div>
-  <div class="modal-speaker-card">
-    <button class="modal-speaker-close" id="modalSpeakerClose" aria-label="Cerrar ventana">&times;</button>
-    <div class="modal-speaker-header">
-      <img src="" alt="" class="modal-speaker-avatar" id="modalSpeakerFoto">
-      <div class="modal-speaker-info-top">
-        <span class="modal-speaker-rol" id="modalSpeakerRol"></span>
-        <h3 class="modal-speaker-nombre" id="modalSpeakerNombre"></h3>
-        <span class="modal-speaker-estado">Confirmado</span>
+  <main class="site-main">
+    <div class="hero-carousel" id="heroCarousel">
+      <div class="hero-slide activo"
+        style="background-image:url('img/artemis-launch.jpg');background-position:center 78%"></div>
+      <div class="hero-slide" style="background-image:url('img/blue-marble.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('img/mars-rover.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('img/spacewalk.jpg')"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-contenido" id="heroContenido">
+        <h1 class="titulo-evento">SPACE WEEK</h1>
+        <div class="fecha-badge">6 — 8 OCTUBRE 2026</div>
+        <p class="bajada">Charlas y mini entrevistas para despertar curiosidad sobre gente que hace ciencia y tecnología
+          de punta en el país, en el área espacial.</p>
+      </div>
+      <button class="hero-flecha hero-flecha-izq" id="heroPrev" aria-label="Anterior"><svg viewBox="0 0 24 24">
+          <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg></button>
+      <button class="hero-flecha hero-flecha-der" id="heroNext" aria-label="Siguiente"><svg viewBox="0 0 24 24">
+          <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg></button>
+      <div class="hero-puntos" id="heroPuntos">
+        <button class="punto activo" data-slide="0" aria-label="Ir a la slide 1"></button>
+        <button class="punto" data-slide="1" aria-label="Ir a la slide 2"></button>
+        <button class="punto" data-slide="2" aria-label="Ir a la slide 3"></button>
+        <button class="punto" data-slide="3" aria-label="Ir a la slide 4"></button>
       </div>
     </div>
-    <div class="modal-speaker-body">
-      <div class="modal-speaker-bloque">
-        <h4 class="modal-speaker-subtitulo">Tema de la charla</h4>
-        <p class="modal-speaker-titulo-charla" id="modalSpeakerCharla"></p>
+
+    <div class="wrap">
+      <section id="cronograma">
+        <h2 class="section-title">Cronograma</h2>
+        <p class="section-sub">Segmentos de 45 minutos, mañana y tarde, para que ambos turnos puedan participar de
+          alguna charla. Se dictan por aula según inscripción — anotate para asegurar tu lugar.</p>
+
+        <div class="cronograma-tabs" id="cronogramaTabs">
+          <button class="tab-dia activo" data-dia-tab="6">Martes 6</button>
+          <button class="tab-dia" data-dia-tab="7">Miércoles 7</button>
+          <button class="tab-dia" data-dia-tab="8">Jueves 8</button>
+        </div>
+
+        <!-- MARTES 6 -->
+        <div class="cronograma-panel" data-dia-panel="6">
+          <div class="dia-header">
+            <h3>Martes 6 de octubre</h3>
+            <span>Horarios sujetos a confirmación</span>
+          </div>
+          <div class="turno-acordeon">
+            <h4 class="turno-titulo">Turno mañana</h4>
+            <div class="turno-contenido">
+              <div class="segmento"><span class="hora">08:00 a 08:40</span><span class="tema">Charla 1</span><span
+                  class="tag">a confirmar</span></div>
+              <div class="segmento"><span class="hora">09:10 a 09:50</span><span class="tema">Charla 2</span><span
+                  class="tag">a confirmar</span></div>
+              <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Charla 3</span><span
+                  class="tag">a confirmar</span></div>
+            </div>
+            <h4 class="turno-titulo">Turno tarde</h4>
+            <div class="turno-contenido">
+              <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema">Charla 1</span><span
+                  class="tag">a confirmar</span></div>
+              <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Paneles solares y energía
+                  espacial</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="socolovsky" role="button"
+                  tabindex="0" title="Ver ficha de Hernán Socolovsky">Hernán Socolovsky<span class="tag-desc">CNEA —
+                    Energía Solar</span></span></div>
+              <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema">Charla 3</span><span
+                  class="tag">opcional</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MIERCOLES 7 -->
+        <div class="cronograma-panel oculto" data-dia-panel="7">
+          <div class="dia-header">
+            <h3>Miércoles 7 de octubre</h3>
+            <span>Horarios sujetos a confirmación</span>
+          </div>
+          <div class="turno-acordeon">
+            <h4 class="turno-titulo">Turno mañana</h4>
+            <div class="turno-contenido">
+              <div class="segmento"><span class="hora">08:00 a 08:40</span><span class="tema">Charla 1</span><span
+                  class="tag">a confirmar</span></div>
+              <div class="segmento"><span class="hora">09:10 a 09:50</span><span class="tema">Charla 2</span><span
+                  class="tag">a confirmar</span></div>
+              <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Charla 3</span><span
+                  class="tag">a confirmar</span></div>
+            </div>
+            <h4 class="turno-titulo">Turno tarde</h4>
+            <div class="turno-contenido">
+              <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema">Charla 1</span><span
+                  class="tag">a confirmar</span></div>
+              <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Charla 2</span><span
+                  class="tag">a confirmar</span></div>
+              <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema">Charla 3</span><span
+                  class="tag">opcional</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- JUEVES 8 -->
+        <div class="cronograma-panel oculto" data-dia-panel="8">
+          <div class="dia-header">
+            <h3>Jueves 8 de octubre</h3>
+            <span>Horarios sujetos a confirmación</span>
+          </div>
+          <div class="turno-acordeon">
+            <h4 class="turno-titulo">Turno mañana</h4>
+            <div class="turno-contenido">
+              <div class="segmento"><span class="hora">08:00 a 08:40</span><span class="tema">Charla 1</span><span
+                  class="tag">a confirmar</span></div>
+              <div class="segmento"><span class="hora">09:10 a 09:50</span><span class="tema">Charla 2</span><span
+                  class="tag">a confirmar</span></div>
+              <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Detección y estudio de
+                  exoplanetas</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="cieza" role="button"
+                  tabindex="0" title="Ver ficha de Lucas Cieza">Lucas Cieza<span class="tag-desc">Universidad Diego
+                    Portales</span></span></div>
+            </div>
+            <h4 class="turno-titulo">Turno tarde</h4>
+            <div class="turno-contenido">
+              <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema">Charla 1</span><span
+                  class="tag">a confirmar</span></div>
+              <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Meteoros, radares y basura
+                  espacial</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="janches" role="button"
+                  tabindex="0" title="Ver ficha de Diego Janches">Diego Janches<span class="tag-desc">NASA
+                    Goddard</span></span></div>
+              <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema">Charla 3</span><span
+                  class="tag">opcional</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="invitados">
+        <h2 class="section-title">Speakers / Entrevistados</h2>
+        <p class="section-sub">Especialistas confirmados y en contacto para esta edición. Tocá la tarjeta de un speaker
+          confirmado para ver el tema de su charla y las preguntas guía.</p>
+
+        <div class="speakers-filtros">
+          <input type="text" id="buscador-speaker" placeholder="Buscar por nombre o área"
+            aria-label="Buscar speaker por nombre o área">
+          <select id="filtro-rol">
+            <option value="">Área — todas</option>
+            <option value="Astrofísica">Astrofísica</option>
+            <option value="Astronomía">Astronomía</option>
+            <option value="Candidata a astronauta">Candidata a astronauta</option>
+            <option value="CONICET / divulgación">CONICET / divulgación</option>
+            <option value="Cosmología">Cosmología</option>
+            <option value="Ingeniería Espacial">Ingeniería Espacial</option>
+            <option value="Ingeniería Química">Ingeniería Química</option>
+          </select>
+          <select id="filtro-dia">
+            <option value="">Día — todos</option>
+            <option value="6">Martes 6</option>
+            <option value="8">Jueves 8</option>
+          </select>
+        </div>
+
+        <div class="grid-invitados" id="grid-speakers">
+          <div class="card-invitado card-clickable" data-speaker="socolovsky" role="button" tabindex="0"
+            data-nombre="hernán socolovsky cnea paneles solares" data-rol="Ingeniería Espacial" data-dia="6">
+            <img src="img/socolovsky.jpg" alt="Hernán Socolovsky" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">CNEA — Energía Solar</div>
+            <h4>Hernán Socolovsky</h4>
+            <p>Ingeniero del Departamento de Energía Solar de la CNEA; desarrolla paneles solares para uso espacial,
+              entre ellos ATENEA, que voló en Artemis II.</p>
+            <span class="estado confirmada">Confirmado</span>
+          </div>
+          <div class="card-invitado card-clickable" data-speaker="janches" role="button" tabindex="0"
+            data-nombre="diego janches nasa goddard astrofísica" data-rol="Astrofísica" data-dia="8">
+            <img src="img/janches.jpg" alt="Diego Janches" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">NASA Goddard</div>
+            <h4>Diego Janches</h4>
+            <p>Astrofísico, investiga en NASA Goddard; colabora con la UNLP en el radar de meteoros de Río Grande. Tiene
+              un asteroide con su nombre.</p>
+            <span class="estado confirmada">Confirmado</span>
+          </div>
+          <div class="card-invitado card-clickable" data-speaker="cieza" role="button" tabindex="0"
+            data-nombre="lucas cieza astronomía proyecto odisea" data-rol="Astronomía" data-dia="8">
+            <img src="img/cieza.jpg" alt="Lucas Cieza" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">Universidad Diego Portales</div>
+            <h4>Lucas Cieza</h4>
+            <p>Astrónomo, lidera el proyecto Odisea, que descubrió el exoplaneta más joven observado hasta la fecha
+              (Elías 2-24 b).</p>
+            <span class="estado confirmada">Confirmado</span>
+          </div>
+          <div class="card-invitado" data-nombre="susana landau cosmóloga ifiba" data-rol="Cosmología" data-dia="">
+            <img src="img/landau.jpg" alt="Susana Landau" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">Cosmología</div>
+            <h4>Dra. Susana Landau</h4>
+            <p>Investigadora en el IFIBA (CONICET-UBA), especializada en cosmología.</p>
+            <span class="estado">En contacto</span>
+          </div>
+          <div class="card-invitado" data-nombre="rodrigo fernando díaz astronomía exoplanetas" data-rol="Astronomía"
+            data-dia="">
+            <img src="img/diaz.jpg" alt="Rodrigo Fernando Díaz" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">Astronomía / Exoplanetas</div>
+            <h4>Dr. Rodrigo Fernando Díaz</h4>
+            <p>Investigador en ICAS-UNSAM e ITBA, especializado en el estudio de exoplanetas.</p>
+            <span class="estado">En contacto</span>
+          </div>
+          <div class="card-invitado" data-nombre="beatriz garcía conicet divulgación pierre auger"
+            data-rol="CONICET / divulgación" data-dia="">
+            <img src="img/garcia.jpg" alt="Beatriz García" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">CONICET / Divulgación</div>
+            <h4>Dra. Beatriz García</h4>
+            <p>ITeDA — Colaboración internacional en el Observatorio Pierre Auger.</p>
+            <span class="estado">En contacto</span>
+          </div>
+          <div class="card-invitado" data-nombre="matías terpolilli astronomía unlp" data-rol="Astronomía" data-dia="">
+            <img src="img/terpolilli.jpg" alt="Matías Terpolilli" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">Astronomía</div>
+            <h4>Matías Terpolilli</h4>
+            <p>Facultad de Ciencias Astronómicas y Geofísicas de la UNLP (FCAG).</p>
+            <span class="estado">En contacto</span>
+          </div>
+          <div class="card-invitado" data-nombre="gustavo romero astrofísica iar" data-rol="Astrofísica" data-dia="">
+            <img src="img/romero.jpg" alt="Gustavo Romero" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">Astrofísica</div>
+            <h4>Dr. Gustavo Romero</h4>
+            <p>Investigador del Instituto Argentino de Radioastronomía (IAR).</p>
+            <span class="estado">En contacto</span>
+          </div>
+          <div class="card-invitado" data-nombre="amina helmi astrofísica kavli" data-rol="Astrofísica" data-dia="">
+            <img src="img/helmi.jpg" alt="Amina Helmi" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">Astrofísica</div>
+            <h4>Dra. Amina Helmi</h4>
+            <p>Premio Kavli de Astrofísica 2026, Universidad de Groningen.</p>
+            <span class="estado">En contacto</span>
+          </div>
+          <div class="card-invitado" data-nombre="lucas paganini nasa goddard" data-rol="Ingeniería Espacial"
+            data-dia="">
+            <img src="img/paganini.jpg" alt="Lucas Paganini" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">Ingeniería Espacial</div>
+            <h4>Dr. Lucas Paganini</h4>
+            <p>Investigador en el Goddard Space Flight Center de la NASA.</p>
+            <span class="estado">En contacto</span>
+          </div>
+          <div class="card-invitado" data-nombre="maría noel de castro campos candidata astronauta"
+            data-rol="Candidata a astronauta" data-dia="">
+            <img src="img/decastrocampos.jpg" alt="María Noel de Castro Campos" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">Candidata a Astronauta</div>
+            <h4>María Noel de Castro Campos</h4>
+            <p>Misión Axiom Space / SpaceX Dragon.</p>
+            <span class="estado">En contacto</span>
+          </div>
+          <div class="card-invitado" data-nombre="josé de castro alem ingeniería química" data-rol="Ingeniería Química"
+            data-dia="">
+            <img src="img/decastroalem.jpg" alt="José De Castro Alem" class="avatar-img"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <div class="rol">Ingeniería Química</div>
+            <h4>José De Castro Alem</h4>
+            <p>Ingeniero químico (UNSa), cursando estudios en recursos y minería espacial.</p>
+            <span class="estado">En contacto</span>
+          </div>
+        </div>
+        <p id="sin-resultados" class="sin-resultados" style="display:none">No encontramos speakers con esos filtros.</p>
+      </section>
+
+      <section>
+        <h2 class="section-title">Recuerdos del evento</h2>
+        <div class="merch-box">
+          <div class="icons">🔑📌🛰️</div>
+          <p>Vamos a tener llaveros y pines personalizados de Space Week para repartir entre estudiantes y profesores —
+            algo simple para llevarse de recuerdo.</p>
+        </div>
+      </section>
+
+      <!-- Nuevas Secciones -->
+      <section id="noticias">
+        <h2 class="section-title">Noticias y Destacados</h2>
+        <p class="section-sub">Las últimas novedades sobre la organización del evento.</p>
+        <div class="destacados-grid">
+          <div class="destacado-card">
+            <div class="destacado-img" style="background-image:url('img/tronador.jpg')"></div>
+            <div class="destacado-content">
+              <span class="destacado-fecha">23 de Septiembre, 2026</span>
+              <h4>¡Fechas Confirmadas!</h4>
+              <p>La Space Week se realizará los días martes 6, miércoles 7 y jueves 8 de octubre en las instalaciones de
+                la escuela.</p>
+            </div>
+          </div>
+          <div class="destacado-card">
+            <div class="destacado-img" style="background-image:url('img/iss.jpg')"></div>
+            <div class="destacado-content">
+              <span class="destacado-fecha">Próximamente</span>
+              <h4>Reservá tu tarjeta</h4>
+              <p>Próximamente vamos a publicar el formulario para reservar y personalizar tu tarjeta exclusiva de la
+                Space Week.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria">
+        <h2 class="section-title">Galería</h2>
+        <p class="section-sub">El sector aeroespacial, nacional e internacional, y los especialistas que forman parte de esta edición.</p>
+        <div class="galeria-grid">
+          <div class="galeria-item" style="background-image:url('img/tronador.jpg')"></div>
+          <div class="galeria-item" style="background-image:url('img/iss.jpg')"></div>
+          <div class="galeria-item" style="background-image:url('img/auger.jpg')"></div>
+          <div class="galeria-item" style="background-image:url('img/meteoro.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/hero-simon.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/janches.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/socolovsky.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/cieza.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/landau.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/diaz.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/garcia.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/terpolilli.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/romero.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/helmi.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/paganini.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/decastrocampos.jpg')"></div>
+          <div class="galeria-item galeria-retrato" style="background-image:url('img/decastroalem.jpg')"></div>
+        </div>
+      </section>
+
+      <section id="ubicacion">
+        <h2 class="section-title">Ubicación</h2>
+        <p class="section-sub">Nos encontramos en el edificio central de la E.E.T. N°24 "Simón de Iriondo".</p>
+        <div class="mapa-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.8529272365287!2d-58.9830504!3d-27.4426543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450c5d0db2460b%3A0xc3af8cfb3d4fba79!2sE.E.T.%20N%C2%B024%20Sim%C3%B3n%20de%20Iriondo!5e0!3m2!1ses-419!2sar!4v1711234567890!5m2!1ses-419!2sar"
+            width="100%" height="350" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-main">
+      <div class="footer-brand">
+        <img src="img/icon_stem_blanco.png" alt="STEM Hub - EET N24" class="footer-logo">
       </div>
-      <div class="modal-speaker-bloque">
-        <h4 class="modal-speaker-subtitulo">Sobre el especialista</h4>
-        <p class="modal-speaker-bio" id="modalSpeakerBio"></p>
+      <div class="footer-col">
+        <h5>El evento</h5>
+        <a href="#">Home</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#invitados">Speakers</a>
       </div>
-      <div class="modal-speaker-bloque">
-        <h4 class="modal-speaker-subtitulo">Preguntas guía</h4>
-        <ul class="modal-speaker-preguntas" id="modalSpeakerPreguntas"></ul>
+      <div class="footer-col">
+        <h5>Participar</h5>
+        <a href="#noticias">Reservá tu tarjeta</a>
+      </div>
+      <div class="footer-col">
+        <h5>Redes</h5>
+        <a href="https://www.instagram.com/eet24stem/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#">Grupo de WhatsApp (próximamente)</a>
+      </div>
+    </div>
+    <div class="footer-bottom-inner">
+      <div class="wrap footer-bottom-flex">
+        <span>Copyright © 2026 — E.E.T. N°24 "Simón de Iriondo"</span>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/eet24stem/" target="_blank" rel="noopener" aria-label="Instagram"><svg
+              viewBox="0 0 24 24">
+              <path
+                d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.9.24 2.4.4.6.24 1 .5 1.5 1 .5.5.7.9 1 1.5.16.5.34 1.2.4 2.4.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.24 1.9-.4 2.4-.24.6-.5 1-1 1.5-.5.5-.9.7-1.5 1-.5.16-1.2.34-2.4.4-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.9-.24-2.4-.4-.6-.24-1-.5-1.5-1-.5-.5-.7-.9-1-1.5-.16-.5-.34-1.2-.4-2.4C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.24-1.9.4-2.4.24-.6.5-1 1-1.5.5-.5.9-.7 1.5-1 .5-.16 1.2-.34 2.4-.4C8.4 2.21 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5 0-4.75.07-1 .05-1.55.2-1.9.34-.48.19-.82.4-1.18.77-.37.36-.58.7-.77 1.18-.14.35-.3.9-.34 1.9C3 9.3 3 9.65 3 12.8s0 3.5.07 4.75c.05 1 .2 1.55.34 1.9.19.48.4.82.77 1.18.36.37.7.58 1.18.77.35.14.9.3 1.9.34 1.25.06 1.6.07 4.75.07s3.5 0 4.75-.07c1-.05 1.55-.2 1.9-.34.48-.19.82-.4 1.18-.77.37-.36.58-.7.77-1.18.14-.35.3-.9.34-1.9.06-1.25.07-1.6.07-4.75s0-3.5-.07-4.75c-.05-1-.2-1.55-.34-1.9a3.16 3.16 0 0 0-.77-1.18 3.16 3.16 0 0 0-1.18-.77c-.35-.14-.9-.3-1.9-.34C15.5 4 15.15 4 12 4zm0 3.4A4.6 4.6 0 1 1 7.4 12 4.6 4.6 0 0 1 12 7.4zm0 1.8A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zm5.85-2.06a1.08 1.08 0 1 1-1.08-1.08 1.08 1.08 0 0 1 1.08 1.08z" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DETALLE DE SPEAKERS CONFIRMADOS -->
+  <div class="modal-speaker-overlay" id="modalSpeaker" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="modalSpeakerNombre">
+    <div class="modal-speaker-backdrop" id="modalSpeakerBackdrop"></div>
+    <div class="modal-speaker-card">
+      <button class="modal-speaker-close" id="modalSpeakerClose" aria-label="Cerrar ventana">&times;</button>
+      <div class="modal-speaker-header">
+        <img src="" alt="" class="modal-speaker-avatar" id="modalSpeakerFoto">
+        <div class="modal-speaker-info-top">
+          <span class="modal-speaker-rol" id="modalSpeakerRol"></span>
+          <h3 class="modal-speaker-nombre" id="modalSpeakerNombre"></h3>
+          <span class="modal-speaker-estado">Confirmado</span>
+        </div>
+      </div>
+      <div class="modal-speaker-body">
+        <div class="modal-speaker-bloque">
+          <h4 class="modal-speaker-subtitulo">Tema de la charla</h4>
+          <p class="modal-speaker-titulo-charla" id="modalSpeakerCharla"></p>
+        </div>
+        <div class="modal-speaker-bloque">
+          <h4 class="modal-speaker-subtitulo">Sobre el especialista</h4>
+          <p class="modal-speaker-bio" id="modalSpeakerBio"></p>
+        </div>
+        <div class="modal-speaker-bloque">
+          <h4 class="modal-speaker-subtitulo">Preguntas guía</h4>
+          <ul class="modal-speaker-preguntas" id="modalSpeakerPreguntas"></ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

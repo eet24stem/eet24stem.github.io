@@ -323,8 +323,10 @@ section{padding-block:44px}
 .card-invitado p{margin:0;font-size:14.5px;color:var(--texto-tenue)}
 .estado{
   display:inline-block;margin-top:10px;font-size:12.5px;font-weight:600;
-  color:var(--celeste-claro);
+  color:var(--texto-tenue);
 }
+.estado.confirmada{color:#1E7B3A}
+.estado.confirmada::before{content:"●";margin-right:6px;font-size:10px;vertical-align:1px}
 
 /* MERCH */
 .merch-box{
@@ -568,12 +570,9 @@ section{padding-block:44px}
   background-position:center;
   border-radius:12px;
   border:1px solid var(--borde);
-  transition:transform 0.25s ease;
-  cursor:pointer;
 }
-.galeria-item:hover{
-  transform:scale(1.02);
-}
+/* Retratos: anclar arriba para que el recorte no corte la cabeza */
+.galeria-item.galeria-retrato{background-position:center 15%}
 
 /* UBICACION / MAPA */
 .mapa-container{
