@@ -134,8 +134,10 @@ window.scrollTo(0, 0);
   }
   function siguiente(){ mostrar(actual + 1); }
   function anterior(){ mostrar(actual - 1); }
+  var sinMovimiento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function reiniciarAutoplay(){
     clearInterval(timer);
+    if (sinMovimiento) return;
     timer = setInterval(siguiente, 6000);
   }
 
@@ -280,10 +282,12 @@ window.scrollTo(0, 0);
   // "overflow:hidden" solo no alcanza en Safari de iPhone, hay que fijar el
   // body con position:fixed y restaurar el scroll manualmente al cerrar.
   var scrollGuardadoModal = 0;
+  var disparador = null;
 
   function abrirModal(id){
     var sp = SPEAKERS_INFO[id];
     if (!sp) return;
+    disparador = document.activeElement;
 
     fotoEl.src = sp.foto;
     fotoEl.alt = sp.nombre;
@@ -306,7 +310,8 @@ window.scrollTo(0, 0);
     document.body.style.position = 'fixed';
     document.body.style.top = (-scrollGuardadoModal) + 'px';
     document.body.style.width = '100%';
-    btnClose.focus();
+    // un momento despues: mientras el modal todavia figura como oculto el navegador ignora el focus()
+    setTimeout(function(){ btnClose.focus({ preventScroll: true }); }, 50);
   }
 
   function cerrarModal(){
@@ -317,6 +322,11 @@ window.scrollTo(0, 0);
     document.body.style.top = '';
     document.body.style.width = '';
     window.scrollTo(0, scrollGuardadoModal);
+    // devolver el foco a la tarjeta o nombre que abrio el modal
+    if (disparador && typeof disparador.focus === 'function') {
+      disparador.focus({ preventScroll: true });
+    }
+    disparador = null;
   }
 
   // Triggers en tarjetas del grid y tags del cronograma
@@ -343,8 +353,29 @@ window.scrollTo(0, 0);
   if (backdrop) backdrop.addEventListener('click', cerrarModal);
 
   document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape' && modal.classList.contains('activo')) {
+    if (!modal.classList.contains('activo')) return;
+    if (e.key === 'Escape') {
       cerrarModal();
+      return;
+    }
+    // Focus trap: con Tab el foco no sale del modal hacia la pagina de fondo
+    if (e.key === 'Tab') {
+      var enfocables = Array.prototype.slice.call(
+        modal.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])')
+      );
+      if (!enfocables.length) return;
+      var primero = enfocables[0];
+      var ultimo = enfocables[enfocables.length - 1];
+      if (e.shiftKey && document.activeElement === primero) {
+        e.preventDefault();
+        ultimo.focus();
+      } else if (!e.shiftKey && document.activeElement === ultimo) {
+        e.preventDefault();
+        primero.focus();
+      } else if (!modal.contains(document.activeElement)) {
+        e.preventDefault();
+        primero.focus();
+      }
     }
   });
 })();

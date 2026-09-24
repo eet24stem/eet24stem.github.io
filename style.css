@@ -295,7 +295,8 @@ section{padding-block:44px}
   padding:18px;
   isolation:isolate;
 }
-.card-invitado::before{
+/* Borde animado solo en las tarjetas que abren ficha: en las demas sugeria que eran clickeables */
+.card-invitado.card-clickable::before{
   content:"";
   position:absolute;
   inset:-2px;
@@ -309,6 +310,10 @@ section{padding-block:44px}
   z-index:-1;
   animation:girar-borde 3.5s linear infinite;
   pointer-events:none;
+}
+.card-invitado .avatar-img{
+  width:80px;height:80px;border-radius:50%;object-fit:cover;
+  margin-bottom:15px;background:#eee;display:block;
 }
 .card-invitado .rol{font-size:13px;color:var(--celeste-claro);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
 .card-invitado h4{margin:0 0 6px 0;font-size:18px}
@@ -566,8 +571,7 @@ section{padding-block:44px}
   border-radius:12px;
   border:1px solid var(--borde);
 }
-/* Retratos: anclar arriba para que el recorte no corte la cabeza */
-.galeria-item.galeria-retrato{background-position:center 15%}
+.galeria-creditos{margin:14px 0 0;font-size:12.5px;color:var(--texto-tenue);line-height:1.5}
 
 /* UBICACION / MAPA */
 .mapa-container{
@@ -616,6 +620,10 @@ body.modal-abierto{
 }
 
 .modal-speaker-overlay{
+  /* el modal esta fuera de .site-main: sin esto toma la paleta oscura y el celeste queda casi blanco sobre blanco */
+  --celeste-claro:#0F4078;
+  --dorado:#7A4E06;
+  --texto-tenue:#5B6B85;
   position:fixed;
   inset:0;
   z-index:9999;
@@ -807,3 +815,10 @@ body.modal-abierto{
     font-size:13.5px;
   }
 }
+
+/* Usuarios con "reducir movimiento" activado en el sistema: sin animaciones continuas */
+@media (prefers-reduced-motion:reduce){
+  .card-invitado.card-clickable::before{animation:none}
+  .hero-slide,.hero-contenido,.modal-speaker-overlay,.modal-speaker-card{transition:none}
+}
+.segmento .tema.tema-pendiente{color:var(--texto-tenue);font-style:italic}

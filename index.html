@@ -8,6 +8,12 @@
   <link rel="icon" type="image/png" href="img/favicon.png">
   <meta name="description"
     content="Space Week 2026: charlas y mini entrevistas de la E.E.T. N°24 Simón de Iriondo, del 6 al 8 de octubre en Resistencia, Chaco.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Space Week 2026 — E.E.T. N°24 Simón de Iriondo">
+  <meta property="og:description" content="Charlas virtuales con especialistas del sector espacial, del 6 al 8 de octubre en Resistencia, Chaco.">
+  <meta property="og:url" content="https://eet24stem.github.io/">
+  <meta property="og:image" content="https://eet24stem.github.io/img/og-space-week.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -39,11 +45,11 @@
 
   <main class="site-main">
     <div class="hero-carousel" id="heroCarousel">
-      <div class="hero-slide activo"
+      <div aria-hidden="true" class="hero-slide activo"
         style="background-image:url('img/artemis-launch.jpg');background-position:center 78%"></div>
-      <div class="hero-slide" style="background-image:url('img/blue-marble.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('img/mars-rover.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('img/spacewalk.jpg')"></div>
+      <div aria-hidden="true" class="hero-slide" style="background-image:url('img/blue-marble.jpg')"></div>
+      <div aria-hidden="true" class="hero-slide" style="background-image:url('img/mars-rover.jpg')"></div>
+      <div aria-hidden="true" class="hero-slide" style="background-image:url('img/spacewalk.jpg')"></div>
       <div class="hero-overlay"></div>
       <div class="hero-contenido" id="heroContenido">
         <h1 class="titulo-evento">SPACE WEEK</h1>
@@ -70,8 +76,7 @@
     <div class="wrap">
       <section id="cronograma">
         <h2 class="section-title">Cronograma</h2>
-        <p class="section-sub">Segmentos de 40 minutos, mañana y tarde, para que ambos turnos puedan participar de
-          alguna charla. Se dictan por aula según inscripción — anotate para asegurar tu lugar.</p>
+        <p class="section-sub">Charlas de 40 minutos en turno mañana y tarde. Cada franja la aprovecha un curso de la escuela, acompañado por su profesor.</p>
 
         <div class="cronograma-tabs" id="cronogramaTabs">
           <button class="tab-dia activo" data-dia-tab="6">Martes 6</button>
@@ -83,28 +88,12 @@
         <div class="cronograma-panel" data-dia-panel="6">
           <div class="dia-header">
             <h3>Martes 6 de octubre</h3>
-            <span>Horarios sujetos a confirmación</span>
           </div>
           <div class="turno-acordeon">
-            <h4 class="turno-titulo">Turno mañana</h4>
-            <div class="turno-contenido">
-              <div class="segmento"><span class="hora">08:00 a 08:40</span><span class="tema">Charla 1</span><span
-                  class="tag">a confirmar</span></div>
-              <div class="segmento"><span class="hora">09:10 a 09:50</span><span class="tema">Charla 2</span><span
-                  class="tag">a confirmar</span></div>
-              <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Charla 3</span><span
-                  class="tag">a confirmar</span></div>
-            </div>
             <h4 class="turno-titulo">Turno tarde</h4>
             <div class="turno-contenido">
-              <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema">Charla 1</span><span
-                  class="tag">a confirmar</span></div>
-              <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Paneles solares y energía
-                  espacial</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="socolovsky" role="button"
-                  tabindex="0" title="Ver ficha de Hernán Socolovsky">Hernán Socolovsky<span class="tag-desc">CNEA —
-                    Energía Solar</span></span></div>
-              <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema">Charla 3</span><span
-                  class="tag">opcional</span></div>
+              <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema tema-pendiente">Charla a confirmar</span></div>
+              <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Paneles solares y energía espacial</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="socolovsky" role="button" tabindex="0" title="Ver ficha de Hernán Socolovsky">Hernán Socolovsky<span class="tag-desc">CNEA — Energía Solar</span></span></div>
             </div>
           </div>
         </div>
@@ -113,26 +102,12 @@
         <div class="cronograma-panel oculto" data-dia-panel="7">
           <div class="dia-header">
             <h3>Miércoles 7 de octubre</h3>
-            <span>Horarios sujetos a confirmación</span>
           </div>
           <div class="turno-acordeon">
             <h4 class="turno-titulo">Turno mañana</h4>
             <div class="turno-contenido">
-              <div class="segmento"><span class="hora">08:00 a 08:40</span><span class="tema">Charla 1</span><span
-                  class="tag">a confirmar</span></div>
-              <div class="segmento"><span class="hora">09:10 a 09:50</span><span class="tema">Charla 2</span><span
-                  class="tag">a confirmar</span></div>
-              <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Charla 3</span><span
-                  class="tag">a confirmar</span></div>
-            </div>
-            <h4 class="turno-titulo">Turno tarde</h4>
-            <div class="turno-contenido">
-              <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema">Charla 1</span><span
-                  class="tag">a confirmar</span></div>
-              <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Charla 2</span><span
-                  class="tag">a confirmar</span></div>
-              <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema">Charla 3</span><span
-                  class="tag">opcional</span></div>
+              <div class="segmento"><span class="hora">09:10 a 09:50</span><span class="tema tema-pendiente">Charla a confirmar</span></div>
+              <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema tema-pendiente">Charla a confirmar</span></div>
             </div>
           </div>
         </div>
@@ -141,30 +116,17 @@
         <div class="cronograma-panel oculto" data-dia-panel="8">
           <div class="dia-header">
             <h3>Jueves 8 de octubre</h3>
-            <span>Horarios sujetos a confirmación</span>
           </div>
           <div class="turno-acordeon">
             <h4 class="turno-titulo">Turno mañana</h4>
             <div class="turno-contenido">
-              <div class="segmento"><span class="hora">08:00 a 08:40</span><span class="tema">Charla 1</span><span
-                  class="tag">a confirmar</span></div>
-              <div class="segmento"><span class="hora">09:10 a 09:50</span><span class="tema">Charla 2</span><span
-                  class="tag">a confirmar</span></div>
-              <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Detección y estudio de
-                  exoplanetas</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="cieza" role="button"
-                  tabindex="0" title="Ver ficha de Lucas Cieza">Lucas Cieza<span class="tag-desc">Universidad Diego
-                    Portales</span></span></div>
+              <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Detección y estudio de exoplanetas</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="cieza" role="button" tabindex="0" title="Ver ficha de Lucas Cieza">Lucas Cieza<span class="tag-desc">Universidad Diego Portales</span></span></div>
             </div>
             <h4 class="turno-titulo">Turno tarde</h4>
             <div class="turno-contenido">
-              <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema">Charla 1</span><span
-                  class="tag">a confirmar</span></div>
-              <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Meteoros, radares y basura
-                  espacial</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="janches" role="button"
-                  tabindex="0" title="Ver ficha de Diego Janches">Diego Janches<span class="tag-desc">NASA
-                    Goddard</span></span></div>
-              <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema">Charla 3</span><span
-                  class="tag">opcional</span></div>
+              <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema tema-pendiente">Charla a confirmar</span></div>
+              <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Meteoros, radares y basura espacial</span><span class="tag tag-clickable tag-desc-wrap" data-speaker="janches" role="button" tabindex="0" title="Ver ficha de Diego Janches">Diego Janches<span class="tag-desc">NASA Goddard</span></span></div>
+              <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema tema-pendiente">Charla a confirmar</span></div>
             </div>
           </div>
         </div>
@@ -198,8 +160,7 @@
         <div class="grid-invitados" id="grid-speakers">
           <div class="card-invitado card-clickable" data-speaker="socolovsky" role="button" tabindex="0"
             data-nombre="hernán socolovsky cnea paneles solares" data-rol="Ingeniería Espacial" data-dia="6">
-            <img src="img/socolovsky.jpg" alt="Hernán Socolovsky" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/socolovsky.jpg" alt="Hernán Socolovsky" class="avatar-img">
             <div class="rol">CNEA — Energía Solar</div>
             <h4>Hernán Socolovsky</h4>
             <p>Ingeniero del Departamento de Energía Solar de la CNEA; desarrolla paneles solares para uso espacial,
@@ -208,8 +169,7 @@
           </div>
           <div class="card-invitado card-clickable" data-speaker="janches" role="button" tabindex="0"
             data-nombre="diego janches nasa goddard astrofísica" data-rol="Astrofísica" data-dia="8">
-            <img src="img/janches.jpg" alt="Diego Janches" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/janches.jpg" alt="Diego Janches" class="avatar-img">
             <div class="rol">NASA Goddard</div>
             <h4>Diego Janches</h4>
             <p>Astrofísico, investiga en NASA Goddard; colabora con la UNLP en el radar de meteoros de Río Grande. Tiene
@@ -218,8 +178,7 @@
           </div>
           <div class="card-invitado card-clickable" data-speaker="cieza" role="button" tabindex="0"
             data-nombre="lucas cieza astronomía proyecto odisea" data-rol="Astronomía" data-dia="8">
-            <img src="img/cieza.jpg" alt="Lucas Cieza" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/cieza.jpg" alt="Lucas Cieza" class="avatar-img">
             <div class="rol">Universidad Diego Portales</div>
             <h4>Lucas Cieza</h4>
             <p>Astrónomo, lidera el proyecto Odisea, que descubrió el exoplaneta más joven observado hasta la fecha
@@ -227,8 +186,7 @@
             <span class="estado confirmada">Confirmado</span>
           </div>
           <div class="card-invitado" data-nombre="susana landau cosmóloga ifiba" data-rol="Cosmología" data-dia="">
-            <img src="img/landau.jpg" alt="Susana Landau" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/landau.jpg" alt="Susana Landau" class="avatar-img">
             <div class="rol">Cosmología</div>
             <h4>Dra. Susana Landau</h4>
             <p>Investigadora en el IFIBA (CONICET-UBA), especializada en cosmología.</p>
@@ -236,8 +194,7 @@
           </div>
           <div class="card-invitado" data-nombre="rodrigo fernando díaz astronomía exoplanetas" data-rol="Astronomía"
             data-dia="">
-            <img src="img/diaz.jpg" alt="Rodrigo Fernando Díaz" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/diaz.jpg" alt="Rodrigo Fernando Díaz" class="avatar-img">
             <div class="rol">Astronomía / Exoplanetas</div>
             <h4>Dr. Rodrigo Fernando Díaz</h4>
             <p>Investigador en ICAS-UNSAM e ITBA, especializado en el estudio de exoplanetas.</p>
@@ -245,32 +202,28 @@
           </div>
           <div class="card-invitado" data-nombre="beatriz garcía conicet divulgación pierre auger"
             data-rol="CONICET / divulgación" data-dia="">
-            <img src="img/garcia.jpg" alt="Beatriz García" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/garcia.jpg" alt="Beatriz García" class="avatar-img">
             <div class="rol">CONICET / Divulgación</div>
             <h4>Dra. Beatriz García</h4>
             <p>ITeDA — Colaboración internacional en el Observatorio Pierre Auger.</p>
             <span class="estado">En contacto</span>
           </div>
           <div class="card-invitado" data-nombre="matías terpolilli astronomía unlp" data-rol="Astronomía" data-dia="">
-            <img src="img/terpolilli.jpg" alt="Matías Terpolilli" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/terpolilli.jpg" alt="Matías Terpolilli" class="avatar-img">
             <div class="rol">Astronomía</div>
             <h4>Matías Terpolilli</h4>
             <p>Facultad de Ciencias Astronómicas y Geofísicas de la UNLP (FCAG).</p>
             <span class="estado">En contacto</span>
           </div>
           <div class="card-invitado" data-nombre="gustavo romero astrofísica iar" data-rol="Astrofísica" data-dia="">
-            <img src="img/romero.jpg" alt="Gustavo Romero" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/romero.jpg" alt="Gustavo Romero" class="avatar-img">
             <div class="rol">Astrofísica</div>
             <h4>Dr. Gustavo Romero</h4>
             <p>Investigador del Instituto Argentino de Radioastronomía (IAR).</p>
             <span class="estado">En contacto</span>
           </div>
           <div class="card-invitado" data-nombre="amina helmi astrofísica kavli" data-rol="Astrofísica" data-dia="">
-            <img src="img/helmi.jpg" alt="Amina Helmi" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/helmi.jpg" alt="Amina Helmi" class="avatar-img">
             <div class="rol">Astrofísica</div>
             <h4>Dra. Amina Helmi</h4>
             <p>Premio Kavli de Astrofísica 2026, Universidad de Groningen.</p>
@@ -278,8 +231,7 @@
           </div>
           <div class="card-invitado" data-nombre="lucas paganini nasa goddard" data-rol="Ingeniería Espacial"
             data-dia="">
-            <img src="img/paganini.jpg" alt="Lucas Paganini" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/paganini.jpg" alt="Lucas Paganini" class="avatar-img">
             <div class="rol">Ingeniería Espacial</div>
             <h4>Dr. Lucas Paganini</h4>
             <p>Investigador en el Goddard Space Flight Center de la NASA.</p>
@@ -287,8 +239,7 @@
           </div>
           <div class="card-invitado" data-nombre="maría noel de castro campos candidata astronauta"
             data-rol="Candidata a astronauta" data-dia="">
-            <img src="img/decastrocampos.jpg" alt="María Noel de Castro Campos" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/decastrocampos.jpg" alt="María Noel de Castro Campos" class="avatar-img">
             <div class="rol">Candidata a Astronauta</div>
             <h4>María Noel de Castro Campos</h4>
             <p>Misión Axiom Space / SpaceX Dragon.</p>
@@ -296,8 +247,7 @@
           </div>
           <div class="card-invitado" data-nombre="josé de castro alem ingeniería química" data-rol="Ingeniería Química"
             data-dia="">
-            <img src="img/decastroalem.jpg" alt="José De Castro Alem" class="avatar-img"
-              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
+            <img src="img/decastroalem.jpg" alt="José De Castro Alem" class="avatar-img">
             <div class="rol">Ingeniería Química</div>
             <h4>José De Castro Alem</h4>
             <p>Ingeniero químico (UNSa), cursando estudios en recursos y minería espacial.</p>
@@ -322,7 +272,7 @@
         <p class="section-sub">Las últimas novedades sobre la organización del evento.</p>
         <div class="destacados-grid">
           <div class="destacado-card">
-            <div class="destacado-img" style="background-image:url('img/tronador.jpg')"></div>
+            <div class="destacado-img" role="img" aria-label="Cohete argentino Tronador II" style="background-image:url('img/tronador.jpg')"></div>
             <div class="destacado-content">
               <span class="destacado-fecha">23 de Septiembre, 2026</span>
               <h4>¡Fechas Confirmadas!</h4>
@@ -331,7 +281,7 @@
             </div>
           </div>
           <div class="destacado-card">
-            <div class="destacado-img" style="background-image:url('img/iss.jpg')"></div>
+            <div class="destacado-img" role="img" aria-label="La Estación Espacial Internacional sobre la Tierra" style="background-image:url('img/iss.jpg')"></div>
             <div class="destacado-content">
               <span class="destacado-fecha">Próximamente</span>
               <h4>Reservá tu tarjeta</h4>
@@ -344,26 +294,22 @@
 
       <section id="galeria">
         <h2 class="section-title">Galería</h2>
-        <p class="section-sub">El sector aeroespacial, nacional e internacional, y los especialistas que forman parte de esta edición.</p>
+        <p class="section-sub">Proyectos, misiones y curiosidades del sector aeroespacial, en Argentina y en el mundo.</p>
         <div class="galeria-grid">
-          <div class="galeria-item" style="background-image:url('img/tronador.jpg')"></div>
-          <div class="galeria-item" style="background-image:url('img/iss.jpg')"></div>
-          <div class="galeria-item" style="background-image:url('img/auger.jpg')"></div>
-          <div class="galeria-item" style="background-image:url('img/meteoro.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/hero-simon.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/janches.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/socolovsky.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/cieza.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/landau.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/diaz.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/garcia.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/terpolilli.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/romero.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/helmi.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/paganini.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/decastrocampos.jpg')"></div>
-          <div class="galeria-item galeria-retrato" style="background-image:url('img/decastroalem.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="Cohete argentino Tronador II" style="background-image:url('img/tronador.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="Satélite ARSAT-1 en la sala limpia de INVAP, Bariloche" style="background-image:url('img/arsat1.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="Banco de ensayo de la antena del satélite SAOCOM" style="background-image:url('img/saocom-antena.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="Detectores del Observatorio Pierre Auger en Malargüe, con la cordillera de fondo" style="background-image:url('img/auger.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="La Estación Espacial Internacional sobre la Tierra" style="background-image:url('img/iss.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="Robot Astrobee flotando dentro de la Estación Espacial Internacional" style="background-image:url('img/astrobee.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="Helicóptero Ingenuity en la superficie de Marte" style="background-image:url('img/ingenuity.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="Buzz Aldrin caminando sobre la Luna, Apolo 11" style="background-image:url('img/aldrin-luna.jpg');background-position:center 20%"></div>
+          <div class="galeria-item" role="img" aria-label="La Tierra saliendo sobre el horizonte lunar, Apolo 8" style="background-image:url('img/earthrise.jpg');background-position:center 65%"></div>
+          <div class="galeria-item" role="img" aria-label="Los Acantilados Cósmicos de la Nebulosa de Carina, telescopio James Webb" style="background-image:url('img/webb-cosmic-cliffs.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="Saturno y sus anillos fotografiados por la sonda Cassini" style="background-image:url('img/saturno.jpg')"></div>
+          <div class="galeria-item" role="img" aria-label="Cielo nocturno con la Vía Láctea y un meteoro" style="background-image:url('img/meteoro.jpg')"></div>
         </div>
+        <p class="galeria-creditos">Imágenes: NASA, ESA, CSA y STScI (dominio público) · ARSAT-1: Casa Rosada, CC BY-SA 2.0 · Antena SAOCOM: BugWarp, CC BY 4.0 · Tronador II: Sergio Panei Pitrau, CC BY 3.0 · Pierre Auger: Lorenzo Caccianiga, CC BY-SA 3.0 · vía Wikimedia Commons.</p>
       </section>
 
       <section id="ubicacion">
