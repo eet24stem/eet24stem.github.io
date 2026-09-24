@@ -93,7 +93,9 @@ window.scrollTo(0, 0);
   ];
 
   function renderContenido(i){
-    var d = contenidoSlides[i];
+    // Puede haber mas fotos de fondo que textos (ver contenidoSlides arriba);
+    // el modulo hace que el texto se repita ciclicamente en vez de quedar vacio.
+    var d = contenidoSlides[i % contenidoSlides.length];
     if (!d) return;
     contenido.innerHTML = '';
     var h1 = document.createElement('h1');
