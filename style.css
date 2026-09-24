@@ -100,7 +100,7 @@ a{color:inherit}
 .hero-contenido .bajada{
   max-width:560px;
   color:#E7EEF8;
-  font-size:16px;
+  font-size:17px;
   margin:0;
 }
 .hero-flecha{
@@ -160,10 +160,10 @@ a{color:inherit}
 
 section{padding-block:44px}
 .section-title{
-  font-size:26px;
+  font-size:27px;
   margin:0 0 6px 0;
 }
-.section-sub{color:var(--texto-tenue);margin:0 0 28px 0;max-width:620px;font-size:15px}
+.section-sub{color:var(--texto-tenue);margin:0 0 28px 0;max-width:620px;font-size:16px}
 
 /* CRONOGRAMA */
 .dia{
@@ -181,13 +181,13 @@ section{padding-block:44px}
   gap:8px;
   margin-bottom:14px;
 }
-.dia-header h3{margin:0;font-size:19px}
-.dia-header span{font-size:13px;color:var(--dorado);font-family:'Chakra Petch',sans-serif}
+.dia-header h3{margin:0;font-size:20px}
+.dia-header span{font-size:14px;color:var(--dorado);font-family:'Chakra Petch',sans-serif}
 
 .cronograma-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
 .tab-dia{
   font-family:'Chakra Petch',sans-serif;
-  font-size:15px;
+  font-size:16px;
   font-weight:600;
   letter-spacing:0.03em;
   color:var(--texto-tenue);
@@ -210,7 +210,7 @@ section{padding-block:44px}
   padding:14px 0 10px 0;
   border-top:1px solid var(--borde);
   font-family:'Chakra Petch',sans-serif;
-  font-size:12px;
+  font-size:13px;
   text-transform:uppercase;
   letter-spacing:0.1em;
   color:var(--texto-tenue);
@@ -225,18 +225,28 @@ section{padding-block:44px}
   align-items:center;
   padding:10px 0;
   border-top:1px solid var(--borde);
-  font-size:14px;
+  font-size:15.5px;
 }
 .turno-contenido .segmento:first-of-type{border-top:none}
-.segmento .hora{color:var(--celeste-claro);font-family:'Chakra Petch',sans-serif;font-size:13px;flex-shrink:0;white-space:nowrap}
+.segmento .hora{color:var(--celeste-claro);font-family:'Chakra Petch',sans-serif;font-size:14px;flex-shrink:0;white-space:nowrap}
 .segmento .tema{flex:1;color:var(--blanco)}
 .segmento .tag{
-  font-size:11px;
+  font-size:13.5px;
   color:var(--texto-tenue);
-  border:1px solid var(--borde);
-  border-radius:999px;
-  padding:2px 9px;
   white-space:nowrap;
+  text-align:right;
+}
+.segmento .tag.tag-desc-wrap{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:flex-end;
+  line-height:1.3;
+  white-space:normal;
+}
+.segmento .tag .tag-desc{
+  font-size:12px;
+  font-weight:500;
+  color:var(--texto-tenue);
 }
 @media (max-width:480px){
   .segmento{flex-wrap:wrap;row-gap:6px}
@@ -268,7 +278,7 @@ section{padding-block:44px}
   white-space:nowrap;
 }
 .speakers-filtros input[type="text"]::placeholder{color:var(--texto-tenue)}
-.sin-resultados{color:var(--texto-tenue);font-size:14.5px;padding:20px 0}
+.sin-resultados{color:var(--texto-tenue);font-size:15.5px;padding:20px 0}
 
 .grid-invitados{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 
@@ -308,12 +318,12 @@ section{padding-block:44px}
   color:#fff;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:18px;
   margin-bottom:14px;
 }
-.card-invitado .rol{font-size:12px;color:var(--dorado);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
-.card-invitado h4{margin:0 0 6px 0;font-size:17px}
-.card-invitado p{margin:0;font-size:13.5px;color:var(--texto-tenue)}
+.card-invitado .rol{font-size:13px;color:var(--celeste-claro);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px}
+.card-invitado h4{margin:0 0 6px 0;font-size:18px}
+.card-invitado p{margin:0;font-size:14.5px;color:var(--texto-tenue)}
 .estado{
-  display:inline-block;margin-top:10px;font-size:11px;padding:3px 10px;border-radius:999px;
-  background:rgba(143,203,242,0.12); color:var(--celeste-claro);
+  display:inline-block;margin-top:10px;font-size:12.5px;font-weight:600;
+  color:var(--celeste-claro);
 }
 
 /* MERCH */
@@ -322,7 +332,7 @@ section{padding-block:44px}
   border:1px solid var(--borde);border-radius:16px;padding:22px;background:var(--card-bg);
 }
 .merch-box .icons{display:flex;gap:14px;font-size:34px}
-.merch-box p{margin:0;color:var(--texto-tenue);font-size:14.5px;flex:1;min-width:220px}
+.merch-box p{margin:0;color:var(--texto-tenue);font-size:15.5px;flex:1;min-width:220px}
 
 /* FOOTER estilo Instituto Balseiro (paleta propia: navy/celeste en vez de rojo) */
 .site-footer{border-top:1px solid var(--borde);margin-top:12px}
@@ -343,7 +353,7 @@ section{padding-block:44px}
   text-transform:uppercase;
   padding-bottom:10px;border-bottom:2px solid #fff;
 }
-.footer-col a{color:#8CFAE1;text-decoration:none;font-size:14px}
+.footer-col a{color:#8CFAE1;text-decoration:none;font-size:15px}
 .footer-col a:hover{color:#fff}
 
 /* footer-bottom-inner: franja a todo el ancho de la pantalla (no solo del .wrap), con su propio fondo */
@@ -358,7 +368,7 @@ section{padding-block:44px}
   padding-block:18px;
   background:#080F20;
   border-top:1px solid var(--borde);
-  font-size:13px;color:var(--texto-tenue);
+  font-size:14px;color:var(--texto-tenue);
 }
 .footer-bottom-flex{
   display:flex;align-items:center;justify-content:space-between;
@@ -414,7 +424,7 @@ section{padding-block:44px}
   line-height:1.2;
 }
 .nav-links{
-  display:flex;align-items:stretch;font-size:14.5px;align-self:stretch;
+  display:flex;align-items:stretch;font-size:15.5px;align-self:stretch;
   max-width:100%;
   overflow-x:auto;
   -webkit-overflow-scrolling:touch;
@@ -528,7 +538,7 @@ section{padding-block:44px}
   gap:10px;
 }
 .destacado-fecha{
-  font-size:12px;
+  font-size:13px;
   color:var(--texto-tenue);
   text-transform:uppercase;
   letter-spacing:0.05em;
@@ -537,12 +547,12 @@ section{padding-block:44px}
 }
 .destacado-content h4{
   margin:0;
-  font-size:19px;
+  font-size:20px;
   color:var(--blanco);
 }
 .destacado-content p{
   margin:0;
-  font-size:14.5px;
+  font-size:15.5px;
   color:var(--texto-tenue);
 }
 
@@ -595,15 +605,13 @@ body.modal-abierto{
 .segmento .tag.tag-clickable{
   cursor:pointer;
   color:var(--celeste-claro);
-  border-color:var(--celeste-claro);
-  background:rgba(15,64,120,0.06);
   font-weight:600;
-  transition:background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  text-underline-offset:3px;
+  transition:color 0.15s ease;
 }
 .segmento .tag.tag-clickable:hover{
-  background:var(--celeste-claro);
-  color:#fff;
-  transform:scale(1.03);
+  color:var(--noche);
+  text-decoration:underline;
 }
 .segmento .tag.tag-clickable:focus-visible{
   outline:2px solid var(--celeste-claro);
@@ -702,15 +710,15 @@ body.modal-abierto{
   gap:4px;
 }
 .modal-speaker-rol{
-  font-size:12px;
-  color:var(--dorado);
+  font-size:13px;
+  color:var(--celeste-claro);
   text-transform:uppercase;
   letter-spacing:0.06em;
   font-weight:600;
 }
 .modal-speaker-nombre{
   margin:0;
-  font-size:22px;
+  font-size:23px;
   font-family:'Public Sans',sans-serif;
   font-weight:700;
   color:#12131A;
@@ -748,7 +756,7 @@ body.modal-abierto{
 }
 .modal-speaker-titulo-charla{
   margin:0;
-  font-size:16px;
+  font-size:17px;
   font-weight:600;
   color:#12131A;
   background:#F3F6FA;
@@ -758,7 +766,7 @@ body.modal-abierto{
 }
 .modal-speaker-bio{
   margin:0;
-  font-size:14.5px;
+  font-size:15.5px;
   line-height:1.55;
   color:#3C4858;
 }
@@ -770,7 +778,7 @@ body.modal-abierto{
   gap:8px;
 }
 .modal-speaker-preguntas li{
-  font-size:14px;
+  font-size:15px;
   line-height:1.5;
   color:#2D3748;
 }
