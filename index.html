@@ -77,7 +77,7 @@
         <h4 class="turno-titulo">Turno tarde</h4>
         <div class="turno-contenido">
           <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema">Charla 1</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Paneles solares y energía espacial</span><span class="tag">Hernán Socolovsky</span></div>
+          <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Paneles solares y energía espacial</span><span class="tag tag-clickable" data-speaker="socolovsky" role="button" tabindex="0" title="Ver ficha de Hernán Socolovsky">Hernán Socolovsky</span></div>
           <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema">Charla 3</span><span class="tag">opcional</span></div>
         </div>
       </div>
@@ -116,12 +116,12 @@
         <div class="turno-contenido">
           <div class="segmento"><span class="hora">08:00 a 08:40</span><span class="tema">Charla 1</span><span class="tag">a confirmar</span></div>
           <div class="segmento"><span class="hora">09:10 a 09:50</span><span class="tema">Charla 2</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Detección y estudio de exoplanetas</span><span class="tag">Lucas Cieza</span></div>
+          <div class="segmento"><span class="hora">10:40 a 11:20</span><span class="tema">Detección y estudio de exoplanetas</span><span class="tag tag-clickable" data-speaker="cieza" role="button" tabindex="0" title="Ver ficha de Lucas Cieza">Lucas Cieza</span></div>
         </div>
         <h4 class="turno-titulo">Turno tarde</h4>
         <div class="turno-contenido">
           <div class="segmento"><span class="hora">14:00 a 14:40</span><span class="tema">Charla 1</span><span class="tag">a confirmar</span></div>
-          <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Meteoros, radares y basura espacial</span><span class="tag">Diego Janches</span></div>
+          <div class="segmento"><span class="hora">15:10 a 15:50</span><span class="tema">Meteoros, radares y basura espacial</span><span class="tag tag-clickable" data-speaker="janches" role="button" tabindex="0" title="Ver ficha de Diego Janches">Diego Janches</span></div>
           <div class="segmento"><span class="hora">16:40 a 17:20</span><span class="tema">Charla 3</span><span class="tag">opcional</span></div>
         </div>
       </div>
@@ -150,21 +150,21 @@
     </div>
 
     <div class="grid-invitados" id="grid-speakers">
-      <div class="card-invitado" data-nombre="hernán socolovsky cnea paneles solares" data-rol="Ingeniería Espacial" data-dia="6">
+      <div class="card-invitado card-clickable" data-speaker="socolovsky" role="button" tabindex="0" data-nombre="hernán socolovsky cnea paneles solares" data-rol="Ingeniería Espacial" data-dia="6">
         <img src="img/socolovsky.jpg" alt="Hernán Socolovsky" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
         <div class="rol">CNEA — Energía Solar</div>
         <h4>Hernán Socolovsky</h4>
         <p>Ingeniero del Departamento de Energía Solar de la CNEA; desarrolla paneles solares para uso espacial, entre ellos ATENEA, que voló en Artemis II.</p>
         <span class="estado confirmada">Confirmado</span>
       </div>
-      <div class="card-invitado" data-nombre="diego janches nasa goddard astrofísica" data-rol="Astrofísica" data-dia="8">
+      <div class="card-invitado card-clickable" data-speaker="janches" role="button" tabindex="0" data-nombre="diego janches nasa goddard astrofísica" data-rol="Astrofísica" data-dia="8">
         <img src="img/janches.jpg" alt="Diego Janches" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
         <div class="rol">NASA Goddard</div>
         <h4>Diego Janches</h4>
         <p>Astrofísico, investiga en NASA Goddard; colabora con la UNLP en el radar de meteoros de Río Grande. Tiene un asteroide con su nombre.</p>
         <span class="estado confirmada">Confirmado</span>
       </div>
-      <div class="card-invitado" data-nombre="lucas cieza astronomía proyecto odisea" data-rol="Astronomía" data-dia="8">
+      <div class="card-invitado card-clickable" data-speaker="cieza" role="button" tabindex="0" data-nombre="lucas cieza astronomía proyecto odisea" data-rol="Astronomía" data-dia="8">
         <img src="img/cieza.jpg" alt="Lucas Cieza" class="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background: #eee;">
         <div class="rol">Universidad Diego Portales</div>
         <h4>Lucas Cieza</h4>
@@ -323,6 +323,36 @@
     </div>
   </div>
 </footer>
+
+<!-- MODAL DETALLE DE SPEAKERS CONFIRMADOS -->
+<div class="modal-speaker-overlay" id="modalSpeaker" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalSpeakerNombre">
+  <div class="modal-speaker-backdrop" id="modalSpeakerBackdrop"></div>
+  <div class="modal-speaker-card">
+    <button class="modal-speaker-close" id="modalSpeakerClose" aria-label="Cerrar ventana">&times;</button>
+    <div class="modal-speaker-header">
+      <img src="" alt="" class="modal-speaker-avatar" id="modalSpeakerFoto">
+      <div class="modal-speaker-info-top">
+        <span class="modal-speaker-rol" id="modalSpeakerRol"></span>
+        <h3 class="modal-speaker-nombre" id="modalSpeakerNombre"></h3>
+        <span class="modal-speaker-estado">Confirmado</span>
+      </div>
+    </div>
+    <div class="modal-speaker-body">
+      <div class="modal-speaker-bloque">
+        <h4 class="modal-speaker-subtitulo">Tema de la charla</h4>
+        <p class="modal-speaker-titulo-charla" id="modalSpeakerCharla"></p>
+      </div>
+      <div class="modal-speaker-bloque">
+        <h4 class="modal-speaker-subtitulo">Sobre el especialista</h4>
+        <p class="modal-speaker-bio" id="modalSpeakerBio"></p>
+      </div>
+      <div class="modal-speaker-bloque">
+        <h4 class="modal-speaker-subtitulo">Preguntas guía</h4>
+        <ul class="modal-speaker-preguntas" id="modalSpeakerPreguntas"></ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
