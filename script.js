@@ -236,33 +236,21 @@ window.scrollTo(0, 0);
       rol: 'CNEA — Energía Solar',
       foto: 'img/socolovsky.jpg',
       titulo: 'Paneles solares y energía espacial',
-      bio: 'Ingeniero del Departamento de Energía Solar de la CNEA; desarrolla paneles solares para uso espacial, entre ellos ATENEA, que voló en Artemis II.',
-      preguntas: [
-        '¿Qué es lo más difícil de que un panel solar funcione en el espacio?',
-        '¿Cómo es trabajar en un proyecto que termina siendo parte de una misión real como Artemis II?'
-      ]
+      bio: 'Ingeniero del Departamento de Energía Solar de la CNEA; desarrolla paneles solares para uso espacial, entre ellos ATENEA, que voló en Artemis II.'
     },
     janches: {
       nombre: 'Diego Janches',
       rol: 'NASA Goddard',
       foto: 'img/janches.jpg',
       titulo: 'Meteoros, radares y basura espacial',
-      bio: 'Astrofísico, investiga en NASA Goddard; colabora con la UNLP en el radar de meteoros de Río Grande. Tiene un asteroide con su nombre.',
-      preguntas: [
-        '¿Cómo es investigar en la NASA colaborando con un radar en Tierra del Fuego?',
-        '¿Qué diferencia hay entre meteoro, meteorito y "basura espacial"?'
-      ]
+      bio: 'Astrofísico, investiga en NASA Goddard; colabora con la UNLP en el radar de meteoros de Río Grande. Tiene un asteroide con su nombre.'
     },
     cieza: {
       nombre: 'Lucas Cieza',
       rol: 'Universidad Diego Portales',
       foto: 'img/cieza.jpg',
       titulo: 'Detección y estudio de exoplanetas',
-      bio: 'Astrónomo, lidera el proyecto Odisea, que descubrió el exoplaneta más joven observado hasta la fecha (Elías 2-24 b).',
-      preguntas: [
-        '¿Cómo se "ve" un planeta tan lejos que ni se puede fotografiar directamente?',
-        '¿Por qué importa encontrar un planeta recién formado?'
-      ]
+      bio: 'Astrónomo, lidera el proyecto Odisea, que descubrió el exoplaneta más joven observado hasta la fecha (Elías 2-24 b).'
     }
   };
 
@@ -274,9 +262,8 @@ window.scrollTo(0, 0);
   var nombreEl = document.getElementById('modalSpeakerNombre');
   var charlaEl = document.getElementById('modalSpeakerCharla');
   var bioEl = document.getElementById('modalSpeakerBio');
-  var preguntasEl = document.getElementById('modalSpeakerPreguntas');
 
-  if (!modal || !btnClose || !fotoEl || !nombreEl || !charlaEl || !bioEl || !preguntasEl) return;
+  if (!modal || !btnClose || !fotoEl || !nombreEl || !charlaEl || !bioEl) return;
 
   // Mismo truco de scroll-lock que ya usa el menu hamburguesa (ver mas abajo):
   // "overflow:hidden" solo no alcanza en Safari de iPhone, hay que fijar el
@@ -295,13 +282,6 @@ window.scrollTo(0, 0);
     nombreEl.textContent = sp.nombre;
     charlaEl.textContent = sp.titulo;
     bioEl.textContent = sp.bio;
-
-    preguntasEl.innerHTML = '';
-    sp.preguntas.forEach(function(pregunta){
-      var li = document.createElement('li');
-      li.textContent = pregunta;
-      preguntasEl.appendChild(li);
-    });
 
     scrollGuardadoModal = window.scrollY;
     modal.classList.add('activo');
