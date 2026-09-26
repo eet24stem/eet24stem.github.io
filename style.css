@@ -337,14 +337,14 @@ section{padding-block:44px}
 .site-footer{border-top:1px solid var(--borde);margin-top:12px}
 .footer-main{
   display:grid;
-  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  grid-template-columns:1.4fr 1fr 1fr;
   gap:32px;
   padding-block:48px 36px;
 }
 @media (max-width:780px){.footer-main{grid-template-columns:1fr 1fr}}
 .footer-brand{display:flex;align-items:center;justify-content:center}
 .footer-brand .footer-logo{width:130px;height:130px;display:block;opacity:0.95}
-@media (max-width:780px){.footer-brand{justify-content:flex-start}}
+@media (max-width:780px){.footer-brand{grid-column:1/-1;justify-content:flex-start}}
 .footer-col{display:flex;flex-direction:column;gap:11px}
 .footer-col h5{
   font-family:'Chakra Petch',sans-serif;
@@ -374,7 +374,7 @@ section{padding-block:44px}
   gap:18px;flex-wrap:wrap;
 }
 
-/* En celular: logo centrado arriba, y 4 bloques en grilla 2x2 pareja (El evento/Participar arriba, Redes/Copyright abajo) */
+/* En celular: logo centrado arriba y debajo El evento y Redes lado a lado (el copyright va aparte, en .footer-bottom-inner) */
 @media (max-width:480px){
   .footer-main{
     grid-template-columns:1fr 1fr;
@@ -386,7 +386,6 @@ section{padding-block:44px}
   .footer-col{align-items:center}
   .footer-main>.footer-col:nth-child(2){grid-column:1;grid-row:2}
   .footer-main>.footer-col:nth-child(3){grid-column:2;grid-row:2}
-  .footer-main>.footer-col:nth-child(4){grid-column:1;grid-row:3}
   .footer-bottom-flex{
     flex-direction:column;
     align-items:center;
@@ -517,7 +516,7 @@ section{padding-block:44px}
 /* NOTICIAS / DESTACADOS */
 .destacados-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
   gap:24px;
 }
 .destacado-card{
